@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+package fr.game.entites;
 
 public abstract class Personne {
 	protected static int ID = 0;

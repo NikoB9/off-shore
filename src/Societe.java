@@ -1,10 +1,14 @@
 import java.util.ArrayList;
 
 public class Societe extends Personne {
-
-	public Societe( String nom, int idPays) {
+	private int Possesseur;
+	public Societe( String nom, int idPays, int Possesseur) {
 		super( nom, idPays);
-		
+		this.Possesseur = Possesseur;
+	}
+
+	public int getPossesseur() {
+		return Possesseur;
 	}
 
 	@Override

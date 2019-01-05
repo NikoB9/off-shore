@@ -5,8 +5,7 @@ public class Pays {
 private static int  ID;
 private String Nom;
 private int IdPays;
-private HashMap<Integer,ArrayList<Societe>> ListeSocietes; // key  --> idPersonne (proprietaire)
-
+private HashMap<Integer,ArrayList<Societe>> ListeSocietes; // key  --> idPersonne (proprietaire)private HashMap<Integer,ArrayList<Societe>> ListeSocietes;
 public Pays(String nom) {
 	Nom = nom;
 	IdPays = ID++;

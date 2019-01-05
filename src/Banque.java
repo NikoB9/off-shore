@@ -5,7 +5,7 @@ import java.util.HashMap;
 import javax.annotation.processing.SupportedSourceVersion;
 
 public class Banque extends Societe {
-private HashMap<Integer,Integer> compte_Client;
+private HashMap<Integer,Integer> compte_Client; // idCompte , idPersonne
 
 public Banque(String nom, int idPays) {
 	super(nom, idPays);

@@ -1,3 +1,5 @@
+package fr.game.entites;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -36,7 +38,7 @@ public ArrayList<Integer> getSocietesPersonne(int IDPersonne)
 
 	@Override
 	public String toString() {
-		return "Pays{" +
+		return "fr.game.entites.Pays{" +
 				"Nom='" + Nom + '\'' +
 				", IdPays=" + IdPays +
 				", ListeSocietes=" + ListeSocietes +

@@ -1,4 +1,6 @@
-import java.util.ArrayList;
+package fr.game.entites;
+
+import fr.game.entites.Personne;
 
 public class Societe extends Personne {
 	private int Possesseur;
@@ -13,7 +15,7 @@ public class Societe extends Personne {
 
 	@Override
 	public String toString() {
-		return "Societe{" +
+		return "fr.game.entites.Societe{" +
 				"idPersonne=" + idPersonne +
 				", nom='" + nom + '\'' +
 				", idPays=" + idPays +

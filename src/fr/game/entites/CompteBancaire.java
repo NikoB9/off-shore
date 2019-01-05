@@ -1,3 +1,5 @@
+package fr.game.entites;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -18,7 +20,7 @@ public class CompteBancaire {
 	}
 	@Override
 	public String toString() {
-		return "CompteBancaire [idCompte=" + idCompte + ", solde=" + solde + "]";
+		return "fr.game.entites.CompteBancaire [idCompte=" + idCompte + ", solde=" + solde + "]";
 	}
 	public int getIdCompte() {
 		return idCompte;

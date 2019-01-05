@@ -1,8 +1,6 @@
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.HashMap;
+package fr.game.entites;
 
-import javax.annotation.processing.SupportedSourceVersion;
+import java.util.HashMap;
 
 public class Banque extends Societe {
 private HashMap<Integer,Integer> compte_Client; // idCompte , idPersonne

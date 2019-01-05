@@ -1,3 +1,5 @@
+package fr.game.entites;
+
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
@@ -16,7 +18,7 @@ public class Contribuable extends Personne {
 
 	@Override
 	public String toString() {
-		return "Personne [prenom=" + prenom +  "]";
+		return "fr.game.entites.Personne [prenom=" + prenom +  "]";
 	}
 
 	

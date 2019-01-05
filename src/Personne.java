@@ -16,7 +16,4 @@ public abstract class Personne {
 	public int getIdPersonne() {
 		return idPersonne;
 	}
-	public void AjouterSociete(Societe s) {
-	Model.getPay(this.idPays).AjouterSocietePersonne(this.idPersonne, s);
-	}
 }

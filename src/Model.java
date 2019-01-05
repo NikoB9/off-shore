@@ -12,23 +12,38 @@ public class Model {
 		ListeSociete =  new HashMap<Integer,Societe>();
 	}
 
-
 	public static Pays getPay(int idPays) {
 		return LesPays.get(idPays);
 	}
 
-	public int aQuiEstCeCompte(int idCompte, int idBanque){
+	public int aQuiEstCeCompte(int idCompte, int idBanque)
+	//retourne l'ID du possesseur du compte
+	{
 
 		return ListeBanque.get(idBanque).posseurCompte(idCompte);
 	}
 
-	public ArrayList<Societe> QuelleSocietesCettePersooneA(int idPersonne, int idPays){
+	public ArrayList<Integer> QuelleSocietesCettePersooneA(int idPersonne, int idPays)
+	// retourne la liste des IDs des societes de la personne
+	{
 
 		return LesPays.get(idPays).getSocietesPersonne(idPersonne);
 	}
 
 	public int QuiPossedeCetteSociete(int idSociete)
+	// retourne l'ID du possesseur
 	{
 		return ListeSociete.get(idSociete).getPossesseur();
+	}
+
+	public void AjouterSocietePersonne(int idPersonne, Societe societe, int idPays)
+	// Ajoute une societe a une personne
+	{
+		if (ListeSociete.containsKey(societe.getIdPersonne())) {
+			System.out.println("erreur : cette societe est deja a une personne");
+		} else {
+			ListeSociete.put(societe.getIdPersonne(), societe);
+			LesPays.get(idPays).AjouterSocietePersonne(idPersonne, societe.getIdPersonne());
+		}
 	}
 }

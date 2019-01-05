@@ -7,8 +7,8 @@ import javax.annotation.processing.SupportedSourceVersion;
 public class Banque extends Societe {
 private HashMap<Integer,Integer> compte_Client; // idCompte , idPersonne
 
-public Banque(String nom, int idPays) {
-	super(nom, idPays);
+public Banque(String nom, int idPays, int idPersonne) {
+	super(nom, idPays, idPersonne);
 	compte_Client = new HashMap<Integer,Integer>();
 	// TODO Auto-generated constructor stub
 }

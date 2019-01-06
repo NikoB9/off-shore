@@ -17,15 +17,24 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/fr/game/model/Model.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="356">
-              <caret line="43" column="5" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
+            <state relative-caret-position="-529">
+              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#addToListeCompteFrauduleParEnqueteur#0;class#Model#0" />
+                <element signature="e#1339#1340#0" expanded="true" />
+                <element signature="e#1395#1396#0" expanded="true" />
                 <element signature="method#addToLesContribuable#0;class#Model#0" />
+                <element signature="e#1567#1568#0" expanded="true" />
+                <element signature="e#1615#1616#0" expanded="true" />
+                <element signature="e#1579#1580#0" expanded="true" />
+                <element signature="e#1661#1662#0" expanded="true" />
                 <element signature="method#addToListeCompteFraudule#0;class#Model#0" />
-                <element signature="e#894#895#0" expanded="true" />
-                <element signature="e#923#924#0" expanded="true" />
+                <element signature="e#1964#1965#0" expanded="true" />
+                <element signature="e#2000#2001#0" expanded="true" />
+                <element signature="e#2046#2047#0" expanded="true" />
+                <element signature="e#2075#2076#0" expanded="true" />
+                <element signature="e#2038#2039#0" expanded="true" />
                 <element signature="e#2095#2104#0" expanded="true" />
               </folding>
             </state>
@@ -152,7 +161,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546776245361" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546776644393" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
@@ -287,11 +296,18 @@
       <option name="project" value="LOCAL" />
       <updated>1546774743600</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="methodes add pour tout le model">
+      <created>1546776295126</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1546776295126</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5321000" />
+    <option name="totallyTimeSpent" value="5717000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1513" height="973" extended-state="6" />
@@ -356,7 +372,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="C'est chiant" />
     <MESSAGE value="Compte frauduleux" />
-    <option name="LAST_COMMIT_MESSAGE" value="Compte frauduleux" />
+    <MESSAGE value="methodes add pour tout le model" />
+    <option name="LAST_COMMIT_MESSAGE" value="methodes add pour tout le model" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/CompteBancaire.java" />
@@ -437,15 +454,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/fr/game/model/Model.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="43" column="5" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
+        <state relative-caret-position="-529">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#addToListeCompteFrauduleParEnqueteur#0;class#Model#0" />
+            <element signature="e#1339#1340#0" expanded="true" />
+            <element signature="e#1395#1396#0" expanded="true" />
             <element signature="method#addToLesContribuable#0;class#Model#0" />
+            <element signature="e#1567#1568#0" expanded="true" />
+            <element signature="e#1615#1616#0" expanded="true" />
+            <element signature="e#1579#1580#0" expanded="true" />
+            <element signature="e#1661#1662#0" expanded="true" />
             <element signature="method#addToListeCompteFraudule#0;class#Model#0" />
-            <element signature="e#894#895#0" expanded="true" />
-            <element signature="e#923#924#0" expanded="true" />
+            <element signature="e#1964#1965#0" expanded="true" />
+            <element signature="e#2000#2001#0" expanded="true" />
+            <element signature="e#2046#2047#0" expanded="true" />
+            <element signature="e#2075#2076#0" expanded="true" />
+            <element signature="e#2038#2039#0" expanded="true" />
             <element signature="e#2095#2104#0" expanded="true" />
           </folding>
         </state>

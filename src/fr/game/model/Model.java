@@ -27,9 +27,7 @@ public class Model {
 	public static void addToListeCompteFrauduleParEnqueteur(CompteBancaire c,Enqeteur e ){
 		ListeCompteFrauduleParEnqueteur.put(e.getIdPersonne(), c);
 	}
-	public static void addToListeSociete(Societe element){
-		ListeSociete.put(element.getIdPersonne(),element );
-	}
+
 	public static void addToListeBanque(Banque element){
 		ListeBanque.put(element.getIdPersonne(), element);
 	}

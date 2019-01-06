@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1af07926-5310-4d52-bbdc-9b7d3557e1b2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fr/game/entites/CompteBancaire.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/game/entites/CompteBancaire.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fr/game/entites/Enqeteur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/game/entites/Enqeteur.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/fr/game/model/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/game/model/Model.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -19,16 +17,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/fr/game/model/Model.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="406">
-              <caret line="26" column="10" lean-forward="true" selection-start-line="26" selection-start-column="10" selection-end-line="26" selection-end-column="10" />
+            <state relative-caret-position="356">
+              <caret line="43" column="5" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1099#1100#0" expanded="true" />
-                <element signature="e#1132#1133#0" expanded="true" />
-                <element signature="e#838#839#0" expanded="true" />
-                <element signature="e#870#871#0" expanded="true" />
-                <element signature="e#817#818#0" expanded="true" />
-                <element signature="e#842#843#0" expanded="true" />
+                <element signature="method#addToListeCompteFrauduleParEnqueteur#0;class#Model#0" />
+                <element signature="method#addToLesContribuable#0;class#Model#0" />
+                <element signature="method#addToListeCompteFraudule#0;class#Model#0" />
                 <element signature="e#894#895#0" expanded="true" />
                 <element signature="e#923#924#0" expanded="true" />
                 <element signature="e#2095#2104#0" expanded="true" />
@@ -157,7 +152,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546774668065" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546776245361" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
@@ -285,11 +280,18 @@
       <option name="project" value="LOCAL" />
       <updated>1546716795923</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Compte frauduleux">
+      <created>1546774743600</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1546774743600</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4313000" />
+    <option name="totallyTimeSpent" value="5321000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1513" height="973" extended-state="6" />
@@ -353,7 +355,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="C'est chiant" />
-    <option name="LAST_COMMIT_MESSAGE" value="C'est chiant" />
+    <MESSAGE value="Compte frauduleux" />
+    <option name="LAST_COMMIT_MESSAGE" value="Compte frauduleux" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/CompteBancaire.java" />
@@ -434,16 +437,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/fr/game/model/Model.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="26" column="10" lean-forward="true" selection-start-line="26" selection-start-column="10" selection-end-line="26" selection-end-column="10" />
+        <state relative-caret-position="356">
+          <caret line="43" column="5" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1099#1100#0" expanded="true" />
-            <element signature="e#1132#1133#0" expanded="true" />
-            <element signature="e#838#839#0" expanded="true" />
-            <element signature="e#870#871#0" expanded="true" />
-            <element signature="e#817#818#0" expanded="true" />
-            <element signature="e#842#843#0" expanded="true" />
+            <element signature="method#addToListeCompteFrauduleParEnqueteur#0;class#Model#0" />
+            <element signature="method#addToLesContribuable#0;class#Model#0" />
+            <element signature="method#addToListeCompteFraudule#0;class#Model#0" />
             <element signature="e#894#895#0" expanded="true" />
             <element signature="e#923#924#0" expanded="true" />
             <element signature="e#2095#2104#0" expanded="true" />

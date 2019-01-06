@@ -27,7 +27,24 @@ public class Model {
 	public static void addToListeCompteFrauduleParEnqueteur(CompteBancaire c,Enqeteur e ){
 		ListeCompteFrauduleParEnqueteur.put(e.getIdPersonne(), c);
 	}
-
+	public static void addToListeSociete(Societe element){
+		ListeSociete.put(element.getIdPersonne(),element );
+	}
+	public static void addToListeBanque(Banque element){
+		ListeBanque.put(element.getIdPersonne(), element);
+	}
+	public static void addToLesContribuable(Contribuable element){
+		LesContribuable.put(element.getIdPersonne(), element);
+	}
+	public static void addToLesPays(Pays element){
+		LesPays.put(element.getIdPays(), element);
+	}
+	public static void addToListeJoueur(Enqeteur e) {
+		ListeJoueur.add(e);
+	}
+	public static void removeToListeJoueur(Enqeteur e) {
+		ListeJoueur.remove(e);
+	}
 	public static void addToListeCompteFraudule(CompteBancaire c){
 		c.setEstFraudule(true);
 		ListeCompteFraudule.add(c);
@@ -35,14 +52,6 @@ public class Model {
 
 	public static void removeToListeCompteFraudule(CompteBancaire c){
 		ListeCompteFraudule.remove(c);
-	}
-
-	public static void addToListeJoueur(Enqeteur e) {
-		ListeJoueur.add(e);
-	}
-
-	public static void removeToListeJoueur(Enqeteur e) {
-		ListeJoueur.remove(e);
 	}
 
 	public static void getEnqueteur(int index){

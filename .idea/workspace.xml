@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="1af07926-5310-4d52-bbdc-9b7d3557e1b2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fr/game/entites/Pays.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/game/entites/Pays.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fr/game/entites/Personne.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/game/entites/Personne.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/fr/game/model/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/game/model/Model.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -17,25 +19,77 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/fr/game/model/Model.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-529">
-              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+            <state relative-caret-position="460">
+              <caret line="136" column="4" selection-start-line="136" selection-start-column="4" selection-end-line="136" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#Model#0;class#Model#0" />
                 <element signature="method#addToListeCompteFrauduleParEnqueteur#0;class#Model#0" />
-                <element signature="e#1339#1340#0" expanded="true" />
-                <element signature="e#1395#1396#0" expanded="true" />
                 <element signature="method#addToLesContribuable#0;class#Model#0" />
-                <element signature="e#1567#1568#0" expanded="true" />
-                <element signature="e#1615#1616#0" expanded="true" />
-                <element signature="e#1579#1580#0" expanded="true" />
-                <element signature="e#1661#1662#0" expanded="true" />
-                <element signature="method#addToListeCompteFraudule#0;class#Model#0" />
-                <element signature="e#1964#1965#0" expanded="true" />
-                <element signature="e#2000#2001#0" expanded="true" />
+                <element signature="e#1610#1636#1" />
                 <element signature="e#2046#2047#0" expanded="true" />
-                <element signature="e#2075#2076#0" expanded="true" />
-                <element signature="e#2038#2039#0" expanded="true" />
+                <element signature="e#1689#1718#1" />
+                <element signature="e#2128#2129#0" expanded="true" />
+                <element signature="method#addToListeCompteFraudule#0;class#Model#0" />
+                <element signature="e#2061#2095#1" />
+                <element signature="e#2505#2506#0" expanded="true" />
+                <element signature="method#aQuiEstCeCompte#0;class#Model#0" />
+                <element signature="method#QuelleSocietesCettePersooneA#0;class#Model#0" />
                 <element signature="e#2095#2104#0" expanded="true" />
+                <element signature="method#QuiPossedeCetteSociete#0;class#Model#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/fr/game/entites/Banque.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/fr/game/entites/Societe.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/fr/game/entites/Pays.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+              <folding>
+                <element signature="e#420#421#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/fr/game/entites/Contribuable.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/fr/game/entites/Personne.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="19" column="31" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
+              <folding>
+                <element signature="e#337#338#0" expanded="true" />
+                <element signature="e#357#358#0" expanded="true" />
+                <element signature="e#403#404#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -76,6 +130,7 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="UPDATE_TYPE" value="MERGE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
@@ -90,15 +145,16 @@
         <option value="$PROJECT_DIR$/src/Pays.java" />
         <option value="$PROJECT_DIR$/src/fr/game/entites/Enqeteur.java" />
         <option value="$PROJECT_DIR$/src/fr/game/entites/CompteBancaire.java" />
+        <option value="$PROJECT_DIR$/src/fr/game/entites/Pays.java" />
+        <option value="$PROJECT_DIR$/src/fr/game/entites/Personne.java" />
         <option value="$PROJECT_DIR$/src/fr/game/model/Model.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1284" />
-    <option name="y" value="-10" />
-    <option name="width" value="1524" />
-    <option name="height" value="1028" />
+    <option name="x" value="-10" />
+    <option name="width" value="2026" />
+    <option name="height" value="1932" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -161,7 +217,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546776644393" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546786951393" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
@@ -303,17 +359,24 @@
       <option name="project" value="LOCAL" />
       <updated>1546776295126</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="methodes add pour tout le model">
+      <created>1546776655307</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1546776655307</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5717000" />
+    <option name="totallyTimeSpent" value="10381000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1513" height="973" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23436426" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23436426" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -322,7 +385,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.21945433" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.21945433" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -431,16 +494,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/fr/game/entites/CompteBancaire.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="32" column="53" selection-start-line="32" selection-start-column="53" selection-end-line="32" selection-end-column="53" />
-          <folding>
-            <element signature="e#797#798#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/fr/game/entites/Enqeteur.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -452,27 +505,86 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/fr/game/entites/Pays.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+          <folding>
+            <element signature="e#420#421#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fr/game/entites/Contribuable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fr/game/entites/Societe.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fr/game/entites/Personne.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="31" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
+          <folding>
+            <element signature="e#337#338#0" expanded="true" />
+            <element signature="e#357#358#0" expanded="true" />
+            <element signature="e#403#404#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/util/function/BiConsumer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="52" column="9" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fr/game/entites/Banque.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fr/game/entites/CompteBancaire.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="32" column="53" selection-start-line="32" selection-start-column="53" selection-end-line="32" selection-end-column="53" />
+          <folding>
+            <element signature="e#797#798#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/fr/game/model/Model.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-529">
-          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+        <state relative-caret-position="460">
+          <caret line="136" column="4" selection-start-line="136" selection-start-column="4" selection-end-line="136" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#Model#0;class#Model#0" />
             <element signature="method#addToListeCompteFrauduleParEnqueteur#0;class#Model#0" />
-            <element signature="e#1339#1340#0" expanded="true" />
-            <element signature="e#1395#1396#0" expanded="true" />
             <element signature="method#addToLesContribuable#0;class#Model#0" />
-            <element signature="e#1567#1568#0" expanded="true" />
-            <element signature="e#1615#1616#0" expanded="true" />
-            <element signature="e#1579#1580#0" expanded="true" />
-            <element signature="e#1661#1662#0" expanded="true" />
-            <element signature="method#addToListeCompteFraudule#0;class#Model#0" />
-            <element signature="e#1964#1965#0" expanded="true" />
-            <element signature="e#2000#2001#0" expanded="true" />
+            <element signature="e#1610#1636#1" />
             <element signature="e#2046#2047#0" expanded="true" />
-            <element signature="e#2075#2076#0" expanded="true" />
-            <element signature="e#2038#2039#0" expanded="true" />
+            <element signature="e#1689#1718#1" />
+            <element signature="e#2128#2129#0" expanded="true" />
+            <element signature="method#addToListeCompteFraudule#0;class#Model#0" />
+            <element signature="e#2061#2095#1" />
+            <element signature="e#2505#2506#0" expanded="true" />
+            <element signature="method#aQuiEstCeCompte#0;class#Model#0" />
+            <element signature="method#QuelleSocietesCettePersooneA#0;class#Model#0" />
             <element signature="e#2095#2104#0" expanded="true" />
+            <element signature="method#QuiPossedeCetteSociete#0;class#Model#0" />
           </folding>
         </state>
       </provider>

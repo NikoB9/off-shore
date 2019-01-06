@@ -14,6 +14,10 @@ public Pays(String nom) {
 	ListeSocietes = new HashMap<Integer,ArrayList<Integer>>();
 }
 
+	public static int getID() {
+		return ID;
+	}
+
 	public int getIdPays() {
 		return IdPays;
 	}

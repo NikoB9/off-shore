@@ -7,6 +7,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Model {
+	private static String[] nom = {"Martin","Bernard","Thomas","Petit","Rober","Richard","Durand","Dubois","Moreau","Laurent","Simon","Michel","Lefebvre","Leroy","Roux","David","Bertrand","Morel","Fournier","Girad"};
+	private static String[] prenom = {"Gabriel","Jules","Lucas","Louis","Adam","Hugo","Léo","Raphaël","Ethan","Nathan","Louise","Emma","Jade","Chloé","Manon","Alice","Lina","Léa","Lola","Camille"};
+	private static String[] nomSociete = {"ehdsdf","xcvnf"};
 	private  static  HashMap<Integer, Pays> LesPays; // key -->
 	private  static  HashMap<Integer, Contribuable> LesContribuable; // key --> IdContribuable
 	private  static  HashMap<Integer, Banque> ListeBanque; // key --> IdBanque
@@ -60,13 +63,13 @@ public class Model {
 		return LesPays.get(idPays);
 	}
 
-	public Contribuable aQuiEstCeCompte(int idCompte, int idBanque)
+	public static Contribuable aQuiEstCeCompte(int idCompte, int idBanque)
 	//retourne l'ID du possesseur du compte
 	{
 		return LesContribuable.get(ListeBanque.get(idBanque).posseurCompte(idCompte));
 	}
 
-	public ArrayList<Societe> QuelleSocietesCettePersooneA(int idPersonne, int idPays)
+	public static ArrayList<Societe> QuelleSocietesCettePersooneA(int idPersonne, int idPays)
 	// retourne la liste des IDs des societes de la personne
 	{
 		ArrayList<Societe> retour = new ArrayList<Societe>();
@@ -76,13 +79,13 @@ public class Model {
 		return retour;
 	}
 
-	public Contribuable QuiPossedeCetteSociete(int idSociete)
+	public static Contribuable QuiPossedeCetteSociete(int idSociete)
 	// retourne l'ID du possesseur
 	{
 		return LesContribuable.get(ListeSociete.get(idSociete).getPossesseur());
 	}
 
-	public void AjouterSocietePersonne(int idPersonne, Societe societe, int idPays)
+	public static void AjouterSocietePersonne(int idPersonne, Societe societe, int idPays)
 	// Ajoute une societe a une personne
 	{
 		if (ListeSociete.containsKey(societe.getIdPersonne())) {
@@ -92,4 +95,44 @@ public class Model {
 			LesPays.get(idPays).AjouterSocietePersonne(idPersonne, societe.getIdPersonne());
 		}
 	}
+
+	public static void AjouterSocieteBanquePersonne(int idPersonne, Banque banque, int idPays)
+	// Ajoute une societe a une personne
+	{
+		if (ListeBanque.containsKey(banque.getIdPersonne())) {
+			System.out.println("erreur : cette societe est deja a une personne");
+		} else {
+			ListeBanque.put(banque.getIdPersonne(), banque);
+			LesPays.get(idPays).AjouterSocietePersonne(idPersonne, banque.getIdPersonne());
+		}
+	}
+
+	public static void genrerContribuable (int nb){
+		for (int i = 0; i < nb; i ++){
+			addToLesContribuable(new Contribuable(nom[(int) Math.random() * ( nom.length - 0 )],prenom[(int) Math.random() * ( prenom.length - 0 )],nb % Pays.getID()));
+		}
+	}
+
+	public static void genrerSociete(int nb){
+		LesContribuable.forEach((k,v) -> AjouterSocietePersonne(v.getIdPersonne(),new Societe(nomSociete[(int) Math.random() * ( nom.length - 0 )], v.getIdPays(),v.getIdPersonne()),v.getIdPays()));
+
+		for (int i = 0; i < nb; i ++){
+			int random = (int) Math.random() * ( Personne.getID() - 0 );
+			if (ListeSociete.containsKey(random))
+				{
+					AjouterSocietePersonne(ListeSociete.get(random).getIdPersonne(),new Societe(nomSociete[(int) Math.random() * ( nom.length - 0 )], ListeSociete.get(random).getIdPays(),ListeSociete.get(random).getIdPersonne()),ListeSociete.get(random).getIdPays());
+				}
+			else i--;
+		}
+
+		for (int j = 0; j < nb/4; j ++){
+			int random = (int) Math.random() * ( Personne.getID() - 0 );
+			if (ListeSociete.containsKey(random))
+			{
+				AjouterSocieteBanquePersonne(ListeSociete.get(random).getIdPersonne(),new Banque(nomSociete[(int) Math.random() * ( nom.length - 0 )], ListeSociete.get(random).getIdPays(),ListeSociete.get(random).getIdPersonne()),ListeSociete.get(random).getIdPays());
+			}
+			else j--;
+		}
+	}
+
 }

@@ -12,7 +12,15 @@ public abstract class Personne {
 		this.idPays = idPays;
 	}
 	abstract Personne getPersonne();
-	
+
+	public int getIdPays() {
+		return idPays;
+	}
+
+	public static int getID() {
+		return ID;
+	}
+
 	public int getIdPersonne() {
 		return idPersonne;
 	}

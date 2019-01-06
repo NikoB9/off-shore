@@ -30,5 +30,7 @@ public class CompteBancaire {
 		return idPersonne;
 	}
 
-	
+	public void setEstFraudule(boolean estFraudule) {
+		this.estFraudule = estFraudule;
+	}
 }

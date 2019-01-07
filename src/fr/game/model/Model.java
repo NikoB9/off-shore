@@ -1,6 +1,10 @@
 package fr.game.model;
 
 import fr.game.entites.*;
+import fr.game.vues.Denonciation;
+import fr.game.vues.testMenu;
+import javafx.application.Application;
+import javafx.stage.Stage;
 ;
 
 import java.util.*;
@@ -34,7 +38,7 @@ public class Model {
 		this.ListeCompte = new HashMap<Integer,CompteBancaire>();
 		this.ListeCompteFrauduleux = new ArrayList<CompteBancaire>();
 		this.HistoriqueDenonciation =new ArrayList<String>();
-		this.HistoriqueDenonciation =new ArrayList<String>();
+		this.HistoriqueQuestion =new ArrayList<String>();
 
 		this.LesPays.put(0,new Pays("France"));
 		this.LesPays.put(1,new Pays("Portugal"));
@@ -49,8 +53,8 @@ public class Model {
 	}
 
 	public static void peupler(){
-		genererContribuables(10);
-		genererSocietes(15);
+		genererContribuables(1);
+		genererSocietes(4);
 		AjouterComptes();
 		creerComptefrauduleux();
 	}
@@ -164,6 +168,7 @@ public class Model {
 	public static String aQuiEstCeCompte(int idCompte, int idBanque)
 	//retourne l'ID du possesseur du compte
 	{
+		System.out.println(idCompte +" "+idBanque);
 		if(ListeBanque.containsKey(idBanque)) {
 			HistoriqueQuestion.add("a Qui Est Ce Compte " + idCompte + ", dans la banque : " + idBanque);
 			return ListeBanque.get(idBanque).posseurCompte(idCompte);
@@ -249,7 +254,7 @@ public class Model {
 			else i--;
 		}
 
-		for (int j = 0; j < nb/4; j ++){
+		for (int j = 0; j < nb/2; j ++){
 			int random = (int) (Math.random() * ( Personne.getID() - 0 ));
 			if (ListeSociete.containsKey(random))
 			{
@@ -326,4 +331,5 @@ public class Model {
 			System.out.println(pays.getNom());
 		}
 	}*/
+
 }

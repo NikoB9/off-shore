@@ -27,13 +27,7 @@ public class Denonciation extends Application {
     TextField IDCompte;
 
 
-    public static void main(String[] args){
-        Model m = new Model();
-        // System.out.println(Model.getIDsBanque());
 
-        Model.peupler();
-        launch(args);
-    }
 
     @Override
     public void start(Stage primaryStage) throws Exception {

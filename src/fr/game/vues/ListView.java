@@ -25,14 +25,6 @@ public class ListView extends Application {
     TextField ID2;
     javafx.scene.control.ListView<String> listView;
 
-    public static void main(String[] args){
-        Model m = new Model();
-       // System.out.println(Model.getIDsBanque());
-
-        Model.peupler();
-        launch(args);
-    }
-
     @Override
     public void start(Stage primaryStage) throws Exception {
 

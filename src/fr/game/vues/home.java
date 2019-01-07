@@ -24,7 +24,7 @@ public class home extends Application {
     Scene scene1, scene2, scene3, scene4;
     boolean user1valid, user2valid, user3valid, user4valid = false;
 
-    Model laBdd = new Model();
+
 
     ArrayList<String> paysUsed = new ArrayList<String>();
 
@@ -38,9 +38,9 @@ public class home extends Application {
     String styleGreen = "-fx-background-color: rgba(50, 205, 50, 0.5 );";
 
 
-    public static void main(String[] args){
+   /* public static void main(String[] args){
         launch(args);
-    }
+    }*/
 
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -382,7 +382,6 @@ public class home extends Application {
                     user4valid = true;
                     grid4.setStyle(styleGreen);
                     AlertBox.display("Bienvenue", "Bienvenue chers enquêteurs.\nQue le meilleur gagne ! ");
-                    Model.peupler();
                 }
                 else {
                     user4valid = false;

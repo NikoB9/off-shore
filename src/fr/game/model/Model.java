@@ -17,7 +17,7 @@ public class Model {
 	private  static  HashMap<Integer, Contribuable> LesContribuable; // key --> IdContribuable
 	private  static  HashMap<Integer, Banque> ListeBanque; // key --> IdBanque
 	private  static  HashMap<Integer,Societe> ListeSociete; // key --> IdSociete
-	private  static  HashMap<Integer,CompteBancaire> ListeCompteFrauduleuxParEnqueteur; // key --> IdEnqueteur
+	private  static  HashMap<Integer,ArrayList<CompteBancaire>> ListeCompteFrauduleuxParEnqueteur; // key --> IdEnqueteur
 	private  static  HashMap<Integer,CompteBancaire> ListeCompte; // key --> IdCompte
 
 	private  static  ArrayList<CompteBancaire> ListeCompteFrauduleux;
@@ -30,7 +30,7 @@ public class Model {
 	public Model() {
 		this.ListeBanque =  new HashMap<Integer,Banque>();
 		this.ListeSociete = new HashMap<Integer, Societe>();
-		this.ListeCompteFrauduleuxParEnqueteur = new HashMap<Integer,CompteBancaire>();
+		this.ListeCompteFrauduleuxParEnqueteur = new HashMap<Integer,ArrayList<CompteBancaire>>();
 		this.ListeJoueur = new ArrayList<Enqeteur>();
 		this.IDsBanque = new  ArrayList<Integer>();
 		this.LesPays = new HashMap<Integer, Pays>();
@@ -87,13 +87,10 @@ public class Model {
 		ListeSociete = listeSociete;
 	}
 
-	public static HashMap<Integer, CompteBancaire> getListeCompteFrauduleuxParEnqueteur() {
+	public static HashMap<Integer, ArrayList<CompteBancaire>> getListeCompteFrauduleuxParEnqueteur() {
 		return ListeCompteFrauduleuxParEnqueteur;
 	}
 
-	public static void setListeCompteFrauduleuxParEnqueteur(HashMap<Integer, CompteBancaire> ListeCompteFrauduleuxParEnqueteur) {
-		ListeCompteFrauduleuxParEnqueteur = ListeCompteFrauduleuxParEnqueteur;
-	}
 
 	public static HashMap<Integer, CompteBancaire> getListeCompte() {
 		return ListeCompte;
@@ -127,9 +124,9 @@ public class Model {
 		Model.IDsBanque = IDsBanque;
 	}
 
-	public static void addToListeCompteFrauduleuxParEnqueteur(CompteBancaire c, Enqeteur e ){
+	/*public static void addToListeCompteFrauduleuxParEnqueteur(CompteBancaire c, Enqeteur e ){
 		ListeCompteFrauduleuxParEnqueteur.put(e.getIdPersonne(), c);
-	}
+	}*/
 
 	public static void addToListeBanque(Banque element){
 		ListeBanque.put(element.getIdPersonne(), element);

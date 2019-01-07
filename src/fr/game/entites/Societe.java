@@ -26,4 +26,5 @@ public class Societe extends Personne {
 	Personne getPersonne() {
 		return this;
 	}
+
 }

@@ -1,5 +1,6 @@
 package fr.game.vues;
 
+import fr.game.techniques.AlertBox;
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
@@ -15,24 +16,41 @@ public class home extends Application {
     Stage window;
     Scene scene1, scene2, scene3, scene4;
 
+    GridPane grid = new GridPane();
+    GridPane grid2 = new GridPane();
+    GridPane grid3 = new GridPane();
+    GridPane grid4 = new GridPane();
+
+    String style = "-fx-background-color: rgba(100, 100, 140, 0.5 );";
+    String styleRed = "-fx-background-color: rgba(205, 92, 92, 0.5 );";
+    String styleGreen = "-fx-background-color: rgba(50, 205, 50, 0.5 );";
+
+
     public static void main(String[] args){
         launch(args);
     }
 
     @Override
     public void start(Stage primaryStage) throws Exception {
+
+        grid.setStyle(style);
+        grid2.setStyle(style);
+        grid3.setStyle(style);
+        grid4.setStyle(style);
+
         window = primaryStage;
 
         //UTILISATEUR
 
         window.setTitle("Home : Utilisateur 1");
 
-        BorderPane root = new BorderPane();
-        GridPane grid = new GridPane();
+        //BorderPane root = new BorderPane();
+        //GridPane grid = new GridPane();
+
         grid.setPadding(new Insets(10,10,10,10));
         grid.setVgap(8);
         grid.setHgap(10);
-        root.setCenter(grid);
+        //root.setCenter(grid);
 
 
         //Name label
@@ -63,38 +81,33 @@ public class home extends Application {
 
 
         Button btnUser2 = new Button("Utilisateur 2");
-        GridPane.setConstraints(btnUser2,0,2);
+        GridPane.setConstraints(btnUser2,1,3);
 
         /*Button user2 = new Button("User 2");
         GridPane.setConstraints(loginButton,3,0);*/
+
+        //radiobouton pour bot
 
         btnUser2.setOnAction(e -> {
 
             window.setTitle("Home : Utilisateur 2");
 
-            /*if(nameInput.getText().trim().equals("nico") && passwordField.getText().trim().equals("nico")){
-                AlertBox.display("Bienvenue", "Welcome");
-            }
-            else if (nameInput.getText().trim().equals("nico")){
-                AlertBox.display("Erreur", "Mot de passe incorrect");
-            }
-            else if(passwordField.getText().trim().equals("nico")){
-                AlertBox.display("Erreur", "Login incorrect");
+            if(name1Input.getText().trim().equals("") || pays1.getValue().trim().equals("")){
+                AlertBox.display("Attention", "Veuillez remplir les champs");
             }
             else{
-                AlertBox.display("Erreur", "Login et mot de passe incorrect");
-            }*/
+                AlertBox.display("Bienvenue", "Bienvenue cher enquêteur.\n Bon courage ! ");
+                window.setScene(scene2);
+            }
 
-            window.setScene(scene2);
 
         });
 
-        String style = "-fx-background-color: rgba(100, 100, 140, 0.5 );";
-        grid.setStyle(style);
+
 
         grid.getChildren().addAll(name1Label, name1Input, pays1,pays1Field, btnUser2);
         //layout1.getChildren().addAll(label1, button1);
-        scene1 = new Scene(root , 300,150);
+        scene1 = new Scene(grid , 300,120);
 
 
 
@@ -105,7 +118,6 @@ public class home extends Application {
 
 
 
-        GridPane grid2 = new GridPane();
         grid2.setPadding(new Insets(10,10,10,10));
         grid2.setVgap(8);
         grid2.setHgap(10);
@@ -138,7 +150,7 @@ public class home extends Application {
 
 
         Button btnUser3 = new Button("Utilisateur 3");
-        GridPane.setConstraints(btnUser3,0,2);
+        GridPane.setConstraints(btnUser3,1,3);
 
         /*Button user2 = new Button("User 2");
         GridPane.setConstraints(loginButton,3,0);*/
@@ -167,7 +179,7 @@ public class home extends Application {
         grid2.getChildren().addAll(name2Label, name2Input, pays2,pays2Field, btnUser3);
         //layout1.getChildren().addAll(label1, button1);
 
-        scene2 = new Scene(grid2, 300,150);
+        scene2 = new Scene(grid2, 300,120);
 
 
 
@@ -184,7 +196,6 @@ public class home extends Application {
 
 
 
-        GridPane grid3 = new GridPane();
         grid3.setPadding(new Insets(10,10,10,10));
         grid3.setVgap(8);
         grid3.setHgap(10);
@@ -217,12 +228,12 @@ public class home extends Application {
 
 
         Button btnUser4 = new Button("Utilisateur 4");
-        GridPane.setConstraints(btnUser4,0,2);
+        GridPane.setConstraints(btnUser4,1,3);
 
         /*Button user2 = new Button("User 2");
         GridPane.setConstraints(loginButton,3,0);*/
 
-        btnUser3.setOnAction(e -> {
+        btnUser4.setOnAction(e -> {
 
             /*if(nameInput.getText().trim().equals("nico") && passwordField.getText().trim().equals("nico")){
                 AlertBox.display("Bienvenue", "Welcome");
@@ -245,7 +256,7 @@ public class home extends Application {
         grid3.getChildren().addAll(name3Label, name3Input, pays3,pays3Field, btnUser4);
         //layout1.getChildren().addAll(label1, button1);
 
-        scene3 = new Scene(grid3, 300,150);
+        scene3 = new Scene(grid3, 300,120);
 
 
 
@@ -260,7 +271,6 @@ public class home extends Application {
 
 
 
-        GridPane grid4 = new GridPane();
         grid4.setPadding(new Insets(10,10,10,10));
         grid4.setVgap(8);
         grid4.setHgap(10);
@@ -293,7 +303,7 @@ public class home extends Application {
 
 
         Button btnJouer = new Button("JOUER");
-        GridPane.setConstraints(btnUser4,0,2);
+        GridPane.setConstraints(btnJouer,1,3);
 
         /*Button user2 = new Button("User 2");
         GridPane.setConstraints(loginButton,3,0);*/
@@ -319,7 +329,7 @@ public class home extends Application {
         grid4.getChildren().addAll(name4Label, name4Input, pays4,pays4Field, btnJouer);
         //layout1.getChildren().addAll(label1, button1);
 
-        scene4 = new Scene(grid4, 300,150);
+        scene4 = new Scene(grid4, 300,120);
 
         window.setScene(scene1);
         window.show();

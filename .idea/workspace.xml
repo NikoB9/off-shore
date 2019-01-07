@@ -1,50 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1af07926-5310-4d52-bbdc-9b7d3557e1b2" name="Default Changelist" comment="">
+    <list default="true" id="870e6abf-a566-4166-975a-abd3b6b3b450" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fr/game/entites/Banque.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/game/entites/Banque.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fr/game/entites/Enqeteur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/game/entites/Enqeteur.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fr/game/entites/Societe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/game/entites/Societe.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/fr/game/model/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/game/model/Model.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fr/game/vues/home.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/game/vues/home.java" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/off_shore_master2$home.ic" NAME="home Coverage Results" MODIFIED="1546809365820" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>fr.game.vues.*</FILTER>
+    </SUITE>
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/fr/game/model/Model.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/fr/game/entites/Enqeteur.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="150" selection-start-line="150" selection-end-line="150" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#Model#0;class#Model#0" />
-                <element signature="method#addToListeCompteFrauduleParEnqueteur#0;class#Model#0" />
-                <element signature="method#addToLesContribuable#0;class#Model#0" />
-                <element signature="e#2174#2175#0" expanded="true" />
-                <element signature="e#2199#2200#0" expanded="true" />
-                <element signature="e#2253#2254#0" expanded="true" />
-                <element signature="e#2281#2282#0" expanded="true" />
-                <element signature="method#addToListeCompteFraudule#0;class#Model#0" />
-                <element signature="e#2721#2722#0" expanded="true" />
-                <element signature="e#2754#2755#0" expanded="true" />
-                <element signature="method#aQuiEstCeCompte#0;class#Model#0" />
-                <element signature="method#QuelleSocietesCettePersooneA#0;class#Model#0" />
-                <element signature="method#QuiPossedeCetteSociete#0;class#Model#0" />
-                <element signature="e#5959#6324#1" />
-              </folding>
+            <state relative-caret-position="68">
+              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fr/game/entites/Banque.java">
+        <entry file="file://$PROJECT_DIR$/src/fr/game/vues/home.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
-              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+              <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/fr/game/model/Model.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="595">
+              <caret line="47" column="29" selection-start-line="47" selection-start-column="29" selection-end-line="47" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -52,80 +52,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/fr/game/entites/Societe.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fr/game/entites/Pays.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
-              <folding>
-                <element signature="e#420#421#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fr/game/entites/Contribuable.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fr/game/entites/Personne.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="31" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
-              <folding>
-                <element signature="e#337#338#0" expanded="true" />
-                <element signature="e#357#358#0" expanded="true" />
-                <element signature="e#403#404#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fr/game/entites/CompteBancaire.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="32" column="53" selection-start-line="32" selection-start-column="53" selection-end-line="32" selection-end-column="53" />
-              <folding>
-                <element signature="e#797#798#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fr/game/entites/Enqeteur.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="16" lean-forward="true" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
-              <folding>
-                <element signature="e#195#196#0" expanded="true" />
-                <element signature="e#237#238#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="379">
+              <caret line="28" selection-start-line="28" selection-end-line="28" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
   </component>
   <component name="Git.Settings">
     <option name="UPDATE_TYPE" value="MERGE" />
@@ -134,75 +67,59 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Enqeteur.java" />
-        <option value="$PROJECT_DIR$/src/Societe.java" />
-        <option value="$PROJECT_DIR$/src/tst.java" />
-        <option value="$PROJECT_DIR$/src/Banque.java" />
-        <option value="$PROJECT_DIR$/src/Personne.java" />
-        <option value="$PROJECT_DIR$/src/Model.java" />
-        <option value="$PROJECT_DIR$/src/Pays.java" />
-        <option value="$PROJECT_DIR$/src/fr/game/entites/Enqeteur.java" />
-        <option value="$PROJECT_DIR$/src/fr/game/entites/CompteBancaire.java" />
-        <option value="$PROJECT_DIR$/src/fr/game/entites/Pays.java" />
-        <option value="$PROJECT_DIR$/src/fr/game/entites/Personne.java" />
+        <option value="$PROJECT_DIR$/src/fr/game/entites/Societe.java" />
         <option value="$PROJECT_DIR$/src/fr/game/model/Model.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-10" />
-    <option name="width" value="2026" />
-    <option name="height" value="1932" />
+    <option name="x" value="-12" />
+    <option name="y" value="9" />
+    <option name="width" value="1101" />
+    <option name="height" value="960" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="off-shore" type="b2602c69:ProjectViewProjectNode" />
-              <item name="off-shore" type="462c0819:PsiDirectoryNode" />
+              <item name="off-shore-master2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="off-shore-master2" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="off-shore" type="b2602c69:ProjectViewProjectNode" />
-              <item name="off-shore" type="462c0819:PsiDirectoryNode" />
+              <item name="off-shore-master2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="off-shore-master2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="off-shore" type="b2602c69:ProjectViewProjectNode" />
-              <item name="off-shore" type="462c0819:PsiDirectoryNode" />
+              <item name="off-shore-master2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="off-shore-master2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="game" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="off-shore" type="b2602c69:ProjectViewProjectNode" />
-              <item name="off-shore" type="462c0819:PsiDirectoryNode" />
+              <item name="off-shore-master2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="off-shore-master2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="game" type="462c0819:PsiDirectoryNode" />
               <item name="entites" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="off-shore" type="b2602c69:ProjectViewProjectNode" />
-              <item name="off-shore" type="462c0819:PsiDirectoryNode" />
+              <item name="off-shore-master2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="off-shore-master2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="game" type="462c0819:PsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="off-shore" type="b2602c69:ProjectViewProjectNode" />
-              <item name="off-shore" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="game" type="462c0819:PsiDirectoryNode" />
-              <item name="techniques" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="off-shore" type="b2602c69:ProjectViewProjectNode" />
-              <item name="off-shore" type="462c0819:PsiDirectoryNode" />
+              <item name="off-shore-master2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="off-shore-master2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="game" type="462c0819:PsiDirectoryNode" />
               <item name="vues" type="462c0819:PsiDirectoryNode" />
@@ -211,16 +128,12 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546788572642" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546811029614" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="vcs.Subversion.SSH" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -234,46 +147,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.TreeView">
-    <configuration name="ListView" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="fr.game.vues.ListView" />
-      <module name="off-shore" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="fr.game.vues.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Menus" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="fr.game.techniques.Menus" />
-      <module name="off-shore" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="fr.game.techniques.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TreeView" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="fr.game.vues.TreeView" />
-      <module name="off-shore" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="fr.game.vues.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager">
     <configuration name="home" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="fr.game.vues.home" />
       <module name="off-shore" />
@@ -287,101 +161,30 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="tst" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="tst" />
-      <module name="off-shore" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.TreeView" />
-        <item itemvalue="Application.ListView" />
         <item itemvalue="Application.home" />
-        <item itemvalue="Application.Menus" />
-        <item itemvalue="Application.tst" />
       </list>
     </recent_temporary>
   </component>
   <component name="SvnConfiguration">
-    <configuration>C:\Users\HUGO\AppData\Roaming\Subversion</configuration>
+    <configuration>C:\Users\lenovo\AppData\Roaming\Subversion</configuration>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="1af07926-5310-4d52-bbdc-9b7d3557e1b2" name="Default Changelist" comment="" />
-      <created>1546695160104</created>
+      <changelist id="870e6abf-a566-4166-975a-abd3b6b3b450" name="Default Changelist" comment="" />
+      <created>1546718261744</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1546695160104</updated>
+      <updated>1546718261744</updated>
     </task>
-    <task id="LOCAL-00001" summary="C'est chiant">
-      <created>1546710455017</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1546710455017</updated>
-    </task>
-    <task id="LOCAL-00002" summary="C'est chiant">
-      <created>1546713973361</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1546713973361</updated>
-    </task>
-    <task id="LOCAL-00003" summary="C'est chiant">
-      <created>1546714030715</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1546714030715</updated>
-    </task>
-    <task id="LOCAL-00004" summary="C'est chiant">
-      <created>1546716795923</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1546716795923</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Compte frauduleux">
-      <created>1546774743600</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1546774743600</updated>
-    </task>
-    <task id="LOCAL-00006" summary="methodes add pour tout le model">
-      <created>1546776295126</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1546776295126</updated>
-    </task>
-    <task id="LOCAL-00007" summary="methodes add pour tout le model">
-      <created>1546776655307</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1546776655307</updated>
-    </task>
-    <task id="LOCAL-00008" summary="methodes add pour tout le model">
-      <created>1546786983296</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1546786983296</updated>
-    </task>
-    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11989000" />
-  </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="-6" width="1513" height="973" extended-state="6" />
+    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23436426" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25101215" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -390,15 +193,15 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.21945433" />
+      <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.7429553" weight="0.20071048" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.25704467" side_tool="true" weight="0.32977462" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info active="true" anchor="bottom" id="Event Log" order="8" side_tool="true" visible="true" weight="0.3285968" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Messages" order="10" />
+      <window_info active="true" anchor="bottom" id="Messages" order="10" visible="true" weight="0.3285968" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -408,155 +211,16 @@
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22749141" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.21945433" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.7429553" weight="0.20071048" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.25704467" side_tool="true" weight="0.32977462" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Messages" order="10" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Maven" order="4" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Capture Analysis" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-    </layout-to-restore>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="C'est chiant" />
-    <MESSAGE value="Compte frauduleux" />
-    <MESSAGE value="methodes add pour tout le model" />
-    <option name="LAST_COMMIT_MESSAGE" value="methodes add pour tout le model" />
+    <MESSAGE value="home 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="home 2" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/CompteBancaire.java" />
-    <entry file="file://$PROJECT_DIR$/src/Enqeteur.java" />
-    <entry file="file://$PROJECT_DIR$/src/Contribuable.java" />
-    <entry file="file://$PROJECT_DIR$/src/tst.java" />
-    <entry file="file://$PROJECT_DIR$/src/Societe.java" />
-    <entry file="file://$PROJECT_DIR$/src/Banque.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/lang/Object.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="234" column="18" selection-start-line="234" selection-start-column="18" selection-end-line="234" selection-end-column="18" />
-          <folding>
-            <element signature="e#10065#10066#0" expanded="true" />
-            <element signature="e#10148#10149#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Personne.java" />
-    <entry file="file://$PROJECT_DIR$/src/Model.java" />
-    <entry file="file://$PROJECT_DIR$/src/Pays.java" />
-    <entry file="file://$PROJECT_DIR$/src/fr/game/techniques/AlertBox.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fr/game/vues/ListView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-628">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fr/game/vues/TreeView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1189">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fr/game/techniques/Menus.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fr/game/vues/home.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/off-shore-master/.classpath" />
+    <entry file="file://$PROJECT_DIR$/off-shore-master/src/Banque.java" />
+    <entry file="file://$PROJECT_DIR$/off-shore-master/src/Model.java" />
     <entry file="file://$PROJECT_DIR$/src/fr/game/entites/Enqeteur.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="16" lean-forward="true" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
-          <folding>
-            <element signature="e#195#196#0" expanded="true" />
-            <element signature="e#237#238#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fr/game/entites/Pays.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
-          <folding>
-            <element signature="e#420#421#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fr/game/entites/Contribuable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fr/game/entites/Personne.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="31" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
-          <folding>
-            <element signature="e#337#338#0" expanded="true" />
-            <element signature="e#357#358#0" expanded="true" />
-            <element signature="e#403#404#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fr/game/entites/CompteBancaire.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="32" column="53" selection-start-line="32" selection-start-column="53" selection-end-line="32" selection-end-column="53" />
-          <folding>
-            <element signature="e#797#798#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/util/function/BiConsumer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="52" column="9" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fr/game/entites/Banque.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
@@ -565,111 +229,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/fr/game/entites/Societe.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fr/game/vues/home.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/fr/game/model/Model.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="150" selection-start-line="150" selection-end-line="150" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#Model#0;class#Model#0" />
-            <element signature="method#addToListeCompteFrauduleParEnqueteur#0;class#Model#0" />
-            <element signature="method#addToLesContribuable#0;class#Model#0" />
-            <element signature="e#2174#2175#0" expanded="true" />
-            <element signature="e#2199#2200#0" expanded="true" />
-            <element signature="e#2253#2254#0" expanded="true" />
-            <element signature="e#2281#2282#0" expanded="true" />
-            <element signature="method#addToListeCompteFraudule#0;class#Model#0" />
-            <element signature="e#2721#2722#0" expanded="true" />
-            <element signature="e#2754#2755#0" expanded="true" />
-            <element signature="method#aQuiEstCeCompte#0;class#Model#0" />
-            <element signature="method#QuelleSocietesCettePersooneA#0;class#Model#0" />
-            <element signature="method#QuiPossedeCetteSociete#0;class#Model#0" />
-            <element signature="e#5959#6324#1" />
-          </folding>
+        <state relative-caret-position="595">
+          <caret line="47" column="29" selection-start-line="47" selection-start-column="29" selection-end-line="47" selection-end-column="29" />
         </state>
       </provider>
     </entry>
   </component>
   <component name="masterDetails">
     <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <last-edited>No facets are configured</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
+      <state key="ProjectJDKs.UI">
         <settings>
           <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>off-shore</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-                <option value="0.6" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ScopeChooserConfigurable.UI">
-        <settings>
           <splitter-proportions>
             <option name="proportions">
               <list>

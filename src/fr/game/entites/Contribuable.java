@@ -18,7 +18,7 @@ public class Contribuable extends Personne {
 
 	@Override
 	public String toString() {
-		return "fr.game.entites.Personne [prenom=" + prenom +  "]";
+		return this.getIdPersonne()+", prenom=" + prenom +  "]";
 	}
 
 	

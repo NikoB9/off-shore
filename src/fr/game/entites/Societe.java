@@ -15,11 +15,8 @@ public class Societe extends Personne {
 
 	@Override
 	public String toString() {
-		return "fr.game.entites.Societe{" +
-				"idPersonne=" + idPersonne +
-				", nom='" + nom + '\'' +
-				", Pays=" + pays +
-				'}';
+		return   idPersonne +
+				", nom=" + nom;
 	}
 
 	@Override

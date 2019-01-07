@@ -2,6 +2,7 @@ package fr.game.entites;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map;
 
 public class Pays {
 private static int  ID;
@@ -47,11 +48,12 @@ public Pays(String nom) {
 		Pays.ID = ID;
 	}
 
-	public ArrayList<Integer> getSocietesPersonne(int IDPersonne)
-{
-	return this.ListeSocietes.get(IDPersonne);
-}
+	public ArrayList<Integer> getSocietesPersonne(int IDPersonne) {
+			return this.ListeSocietes.get(IDPersonne); }
 
+	public boolean paysContientPersonne (int IDPersonne){
+		return this.ListeSocietes.containsKey(IDPersonne);
+	}
 	@Override
 	public String toString() {
 		return "fr.game.entites.Pays{" +

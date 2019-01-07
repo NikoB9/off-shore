@@ -13,8 +13,11 @@ public Banque(String nom, Pays pays, int idPersonne) {
 public void ajouterCompte(int idCompte, int idPersonne) {
 	if( ! compte_Client.containsValue(idPersonne)) compte_Client.put(idCompte, idPersonne);
 }
-public int posseurCompte (int idCompte) {
-	return compte_Client.get(idCompte);
+public String posseurCompte (int idCompte) {
+	if (compte_Client.containsKey(idCompte))
+		return "id du possesseur du compte : "+Integer.toString(compte_Client.get(idCompte));
+	else
+		return "Pas de compte pour cette personne";
 }
 	
 }

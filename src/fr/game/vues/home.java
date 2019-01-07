@@ -25,7 +25,7 @@ public class home extends Application {
 
     //Model laBdd = new Model();
     List<Pays> lesPays = Model.getLesPays();
-    List<String> paysUsed;
+    ArrayList<String> paysUsed;
 
     GridPane grid = new GridPane();
     GridPane grid2 = new GridPane();
@@ -85,7 +85,7 @@ public class home extends Application {
         }
 
         //Set a default value
-        pays1.setValue("France");
+        //pays1.setValue("France");
 
         //Add "TextField"
         pays1.setEditable(true);
@@ -103,18 +103,25 @@ public class home extends Application {
 
         btnUser2.setOnAction(e -> {
 
-            window.setTitle("Home : Utilisateur 2");
 
-            if(name1Input.getText().trim().equals("") || pays1.getValue().trim().equals("")){
+            String choixPays = pays1.getSelectionModel().selectedItemProperty().getValue().trim();
+
+            //System.out.println(choixPays);
+
+
+            if(name1Input.getText().trim().equals("") || choixPays.equals("")){
                 user1valid = false;
                 grid.setStyle(styleRed);
                 AlertBox.display("Attention", "Veuillez remplir les champs");
             }
             else{
 
-                paysUsed.add(pays1.getValue().trim());
-                Model.addToListeJoueur(new Enqeteur("","", new Pays(pays1.getValue().trim()), false, name1Input.getText().trim()));
+                System.out.println(choixPays);
+
+                paysUsed.add(choixPays);
+                Model.addToListeJoueur(new Enqeteur("","", new Pays(choixPays), false, name1Input.getText().trim()));
                 user1valid = true;
+                window.setTitle("Home : Utilisateur 2");
                 grid.setStyle(styleGreen);
                 window.setScene(scene2);
             }

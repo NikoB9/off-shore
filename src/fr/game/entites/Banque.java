@@ -19,5 +19,12 @@ public String posseurCompte (int idCompte) {
 	else
 		return "Pas de compte pour cette personne";
 }
+
+public Integer IDposseurCompte (int idCompte) {
+	if (compte_Client.containsKey(idCompte))
+		return compte_Client.get(idCompte);
+	else
+		return null;
+	}
 	
 }

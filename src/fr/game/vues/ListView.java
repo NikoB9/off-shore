@@ -76,7 +76,7 @@ public class ListView extends Application {
         //layout.getChildren().addAll(listView,button,newValue,oldValue);
         layout.getChildren().addAll(listView,LabelID,ID,LabelID2,ID2,button,question);
 
-        scene = new Scene(layout, 400, 250);
+        scene = new Scene(layout, 400, 500);
 
         window.setScene(scene);
 

@@ -22,6 +22,9 @@ public Pays(String nom) {
 	public int getIdPays() {
 		return IdPays;
 	}
+	public boolean PersonnepossedeSociete(int idPersone, int idSociete){
+	return ListeSocietes.get(idPersone).contains(idSociete);
+	}
 
 	public void AjouterSocietePersonne(int idPersonne, int idSociete)
 {

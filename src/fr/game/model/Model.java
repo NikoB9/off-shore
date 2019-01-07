@@ -19,6 +19,9 @@ public class Model {
 	private  static  ArrayList<CompteBancaire> ListeCompteFrauduleux;
 	private  static  ArrayList<Enqeteur> ListeJoueur;
 	private  static  ArrayList<Integer> IDsBanque;
+	private  static  ArrayList<String> HistoriqueDenonciation;
+	private  static  ArrayList<String> HistoriqueQuestion;
+
 
 	public Model() {
 		this.ListeBanque =  new HashMap<Integer,Banque>();
@@ -29,23 +32,27 @@ public class Model {
 		this.LesPays = new HashMap<Integer, Pays>();
 		this.LesContribuable = new HashMap<Integer, Contribuable>();
 		this.ListeCompte = new HashMap<Integer,CompteBancaire>();
+		this.ListeCompteFrauduleux = new ArrayList<CompteBancaire>();
+		this.HistoriqueDenonciation =new ArrayList<String>();
+		this.HistoriqueDenonciation =new ArrayList<String>();
 
 		this.LesPays.put(0,new Pays("France"));
-		/*this.LesPays.put(1,new Pays("Portugal"));
+		this.LesPays.put(1,new Pays("Portugal"));
 		this.LesPays.put(2,new Pays("Grande Bretagne"));
 		this.LesPays.put(3,new Pays("Espagne"));
 		this.LesPays.put(4,new Pays("Italie"));
 		this.LesPays.put(5,new Pays("Laos"));
 		this.LesPays.put(6,new Pays("Japon"));
 		this.LesPays.put(7,new Pays("Mexique"));
-		this.LesPays.put(8,new Pays("Suisse"));*/
+		this.LesPays.put(8,new Pays("Suisse"));
 
 	}
 
 	public static void peupler(){
 		genererContribuables(10);
-		genererSocietes(25);
+		genererSocietes(15);
 		AjouterComptes();
+		creerComptefrauduleux();
 	}
 
 	public static HashMap<Integer, Pays> getLesPays() {
@@ -157,8 +164,10 @@ public class Model {
 	public static String aQuiEstCeCompte(int idCompte, int idBanque)
 	//retourne l'ID du possesseur du compte
 	{
-		if(ListeBanque.containsKey(idBanque))
+		if(ListeBanque.containsKey(idBanque)) {
+			HistoriqueQuestion.add("a Qui Est Ce Compte " + idCompte + ", dans la banque : " + idBanque);
 			return ListeBanque.get(idBanque).posseurCompte(idCompte);
+		}
 		else
 			return "Cette banque n'existe pas";
 	}
@@ -172,6 +181,7 @@ public class Model {
 				for (int index : LesPays.get(idPays).getSocietesPersonne(idPersonne)){
 					retour += "ID Societe : " + ListeSociete.get(index)+"\n" ;
 				}
+				HistoriqueQuestion.add("Quelle Societes le contribualble : "+idPersonne+", dans le pays : "+idPays+" A");
 				return retour;
 			}
 			else
@@ -188,6 +198,7 @@ public class Model {
 	{
 		String retour ="Cettesociete n'existe pas";
 		if (ListeSociete.containsKey(idSociete)){
+			HistoriqueQuestion.add("Qui Possede Cette Societe : "+idSociete);
 			retour ="ID : " +LesContribuable.get(ListeSociete.get(idSociete).getPossesseur()).toString() ;
 		}
 
@@ -229,7 +240,6 @@ public class Model {
 			Contribuable v = entry.getValue();
 			AjouterSocietePersonne(v.getIdPersonne(), new Societe(nomSociete[(int) Math.random() * (nom.length - 0)], v.getPays(), v.getIdPersonne()), v.getPays().getIdPays());
 		}
-		System.out.println("fin");
 		for (int i = 0; i < nb; i ++){
 			int random = (int) (Math.random() * ( Personne.getID() - 0 ));
 			if (ListeSociete.containsKey(random))
@@ -283,7 +293,31 @@ public class Model {
 		}
 		return null;
 	}
+	public static String denoncer(int idPays, int idPersonne, int idBanque, int idCompte){
+		if (!(LesPays.containsKey(idPays) || LesContribuable.containsKey(idPersonne) || ListeBanque.containsKey(idBanque) || ListeCompte.containsKey(idCompte))){
+			return "Un des champs au moins est erroné";
+		}
+		if (! ListeCompteFrauduleux.contains(ListeCompte.get(idCompte))){
+			return "ce compte n'est pas frauduleux ou a déjà été dénoncé";
+		}
+		System.out.println(ListeBanque.get(idBanque).getPays().getIdPays());
+		if(ListeBanque.get(idBanque).getPays().getIdPays() == idPays){
+			if(LesPays.get(idPays).paysContientPersonne(ListeCompte.get(idCompte).getIdPersonne())){
+				HistoriqueDenonciation.add("Dans le pays : "+idPays+", le contribualble : "+idPersonne + ", numro de compte : "+idCompte);
+				ListeCompteFrauduleux.remove(ListeCompte.get(idCompte));
+				return "Denonciation effectué !!";
+			}
+			return "debug";
+		}
 
+		return "Ce compte n'appartient pas a cette personne ou n'est pas dans cette banque";
+	}
+	public static void creerComptefrauduleux(){
+		for (int i = 0; i < ListeCompte.size()/2  ; i++){
+			System.out.println(ListeCompte.get(i).getIdCompte());
+			addToListeCompteFrauduleux(ListeCompte.get(i));
+		}
+	}
 	/*public static void main (String... args){
 		Model m = new Model();
 		for (Map.Entry<Integer, Pays> entry : Model.getLesPays().entrySet()) {

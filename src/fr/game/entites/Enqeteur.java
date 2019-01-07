@@ -10,4 +10,20 @@ public class Enqeteur extends Contribuable {
         this.pseudo = pseudo;
         this.robot = robot;
     }
+
+    public boolean isRobot() {
+        return robot;
+    }
+
+    public void setRobot(boolean robot) {
+        this.robot = robot;
+    }
+
+    public String getPseudo() {
+        return pseudo;
+    }
+
+    public void setPseudo(String pseudo) {
+        this.pseudo = pseudo;
+    }
 }

@@ -9,17 +9,7 @@ public class Model {
 	private static String[] nom = {"Martin","Bernard","Thomas","Petit","Rober","Richard","Durand","Dubois","Moreau","Laurent","Simon","Michel","Lefebvre","Leroy","Roux","David","Bertrand","Morel","Fournier","Girad"};
 	private static String[] prenom = {"Gabriel","Jules","Lucas","Louis","Adam","Hugo","Léo","Raphaël","Ethan","Nathan","Louise","Emma","Jade","Chloé","Manon","Alice","Lina","Léa","Lola","Camille"};
 	private static String[] nomSociete = {"ehdsdf","xcvnf"};
-	private  static List<Pays> LesPays = Arrays.asList(new Pays("France"),
-			new Pays("Californie"),
-			new Pays("Portugal"),
-			new Pays("Grande Bretagne"),
-			new Pays("Espagne"),
-			new Pays("Italie"),
-			new Pays("Laos"),
-			new Pays("Japon"),
-			new Pays("Mexique"),
-			new Pays("Suisse")
-			); // key -->
+	private  static  HashMap<Integer, Pays> LesPays; // key --> IdPays
 	private  static  HashMap<Integer, Contribuable> LesContribuable; // key --> IdContribuable
 	private  static  HashMap<Integer, Banque> ListeBanque; // key --> IdBanque
 	private  static  HashMap<Integer,Societe> ListeSociete; // key --> IdSociete
@@ -35,6 +25,18 @@ public class Model {
 		this.ListeSociete = new HashMap<Integer, Societe>();
 		this.ListeCompteFrauduleuxParEnqueteur = new HashMap<Integer,CompteBancaire>();
 		this.ListeJoueur = new ArrayList<Enqeteur>();
+		this.LesPays = new HashMap<Integer, Pays>();
+
+		this.LesPays.put(0,new Pays("France"));
+		this.LesPays.put(1,new Pays("Portugal"));
+		this.LesPays.put(2,new Pays("Grande Bretagne"));
+		this.LesPays.put(3,new Pays("Espagne"));
+		this.LesPays.put(4,new Pays("Italie"));
+		this.LesPays.put(5,new Pays("Laos"));
+		this.LesPays.put(6,new Pays("Japon"));
+		this.LesPays.put(7,new Pays("Mexique"));
+		this.LesPays.put(8,new Pays("Suisse"));
+
 	}
 
 	public static void peupler(){
@@ -43,12 +45,8 @@ public class Model {
 		AjouterComptes();
 	}
 
-	public static List<Pays> getLesPays() {
+	public static HashMap<Integer, Pays> getLesPays() {
 		return LesPays;
-	}
-
-	public static void setLesPays(List<Pays> lesPays) {
-		LesPays = lesPays;
 	}
 
 	public static HashMap<Integer, Contribuable> getLesContribuable() {
@@ -126,7 +124,7 @@ public class Model {
 		LesContribuable.put(element.getIdPersonne(), element);
 	}
 	public static void addToLesPays(Pays element){
-		LesPays.add(element);
+		LesPays.put(element.getIdPays(),element);
 	}
 	public static void addToListeJoueur(Enqeteur e) {
 		ListeJoueur.add(e);
@@ -251,4 +249,24 @@ public class Model {
 			ListeBanque.get(codeBanque).ajouterCompte(c.getIdCompte(),v.getIdPersonne());
 		}
 	}
+	public static Integer getIdPaysByname(String nom){
+
+		for (Map.Entry<Integer, Pays> entry : Model.getLesPays().entrySet()) {
+			Integer key = entry.getKey();
+			Pays pays = entry.getValue();
+			if (pays.getNom() == nom){
+				return pays.getIdPays();
+			}
+		}
+		return null;
+	}
+
+	/*public static void main (String... args){
+		Model m = new Model();
+		for (Map.Entry<Integer, Pays> entry : Model.getLesPays().entrySet()) {
+			Integer key = entry.getKey();
+			Pays pays = entry.getValue();
+			System.out.println(pays.getNom());
+		}
+	}*/
 }

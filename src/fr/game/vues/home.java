@@ -16,6 +16,7 @@ import javafx.stage.Stage;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class home extends Application {
 
@@ -23,9 +24,9 @@ public class home extends Application {
     Scene scene1, scene2, scene3, scene4;
     boolean user1valid, user2valid, user3valid, user4valid = false;
 
-    //Model laBdd = new Model();
-    List<Pays> lesPays = Model.getLesPays();
-    ArrayList<String> paysUsed;
+    Model laBdd = new Model();
+
+    ArrayList<String> paysUsed = new ArrayList<String>();
 
     GridPane grid = new GridPane();
     GridPane grid2 = new GridPane();
@@ -80,9 +81,13 @@ public class home extends Application {
         javafx.scene.control.ComboBox<String> pays1 = new javafx.scene.control.ComboBox<>();
 
         //GetItems return the ObservableList object which you can add items to
-        for (Pays p : lesPays){
-            pays1.getItems().add(p.getNom());
+        for (Map.Entry<Integer, Pays> entry : Model.getLesPays().entrySet()) {
+            Integer key = entry.getKey();
+            Pays pays = entry.getValue();
+            pays1.getItems().add(pays.getNom());
         }
+
+
 
         //Set a default value
         pays1.setValue("");
@@ -114,7 +119,7 @@ public class home extends Application {
         btnUser2.setOnAction(e -> {
 
 
-            final String choixPays = pays1.getSelectionModel().selectedItemProperty().getValue().trim();
+             String choixPays = pays1.getSelectionModel().selectedItemProperty().getValue().trim();
 
             //System.out.println(choixPays);
 
@@ -134,7 +139,7 @@ public class home extends Application {
                 System.out.println(choixPays);
 
                 paysUsed.add(choixPays);
-                Model.addToListeJoueur(new Enqeteur("","", new Pays(choixPays), bot, name1Input.getText().trim()));
+                Model.addToListeJoueur(new Enqeteur("","", Model.getPay(Model.getIdPaysByname(choixPays)), bot, name1Input.getText().trim()));
                 user1valid = true;
                 window.setTitle("Home : Utilisateur 2");
                 grid.setStyle(styleGreen);
@@ -143,8 +148,6 @@ public class home extends Application {
 
 
         });
-
-
 
         grid.getChildren().addAll(name1Label, name1Input, pays1,pays1Field, BOT1, btnUser2);
         //layout1.getChildren().addAll(label1, button1);
@@ -180,8 +183,10 @@ public class home extends Application {
 
         //GetItems return the ObservableList object which you can add items to
        // pays2.getItems().addAll("France", "Californie", "Portugal", "Grande Bretagne", "Espagne");
-        for (Pays p : lesPays){
-            pays2.getItems().add(p.getNom());
+        for (Map.Entry<Integer, Pays> entry : Model.getLesPays().entrySet()) {
+            Integer key = entry.getKey();
+            Pays pays = entry.getValue();
+            pays2.getItems().add(pays.getNom());
         }
 
         //Add "TextField"
@@ -263,8 +268,10 @@ public class home extends Application {
         javafx.scene.control.ComboBox<String> pays3 = new javafx.scene.control.ComboBox<>();
 
         //GetItems return the ObservableList object which you can add items to
-        for (Pays p : lesPays){
-            pays3.getItems().add(p.getNom());
+        for (Map.Entry<Integer, Pays> entry : Model.getLesPays().entrySet()) {
+            Integer key = entry.getKey();
+            Pays pays = entry.getValue();
+            pays3.getItems().add(pays.getNom());
         }
 
         //Add "TextField"
@@ -343,8 +350,10 @@ public class home extends Application {
         javafx.scene.control.ComboBox<String> pays4 = new javafx.scene.control.ComboBox<>();
 
         //GetItems return the ObservableList object which you can add items to
-        for (Pays p : lesPays){
-            pays4.getItems().add(p.getNom());
+        for (Map.Entry<Integer, Pays> entry : Model.getLesPays().entrySet()) {
+            Integer key = entry.getKey();
+            Pays pays = entry.getValue();
+            pays4.getItems().add(pays.getNom());
         }
 
         //Add "TextField"

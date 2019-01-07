@@ -85,7 +85,7 @@ public class home extends Application {
         }
 
         //Set a default value
-        //pays1.setValue("France");
+        pays1.setValue("");
 
         //Add "TextField"
         pays1.setEditable(true);
@@ -100,26 +100,41 @@ public class home extends Application {
         GridPane.setConstraints(loginButton,3,0);*/
 
         //radiobouton pour bot
+        //ChoiceBox
+        //javafx.scene.control.ChoiceBox<String> BOT1 = new javafx.scene.control.ChoiceBox<>();
+        javafx.scene.control.ComboBox<String> BOT1 = new javafx.scene.control.ComboBox<>();
+
+        //GetItems return the ObservableList object which you can add items to
+        BOT1.getItems().addAll("Joueur", "Robot");
+
+        //Set a default value
+        BOT1.setValue("Joueur");
+        GridPane.setConstraints(BOT1,0,3);
 
         btnUser2.setOnAction(e -> {
 
 
-            String choixPays = pays1.getSelectionModel().selectedItemProperty().getValue().trim();
+            final String choixPays = pays1.getSelectionModel().selectedItemProperty().getValue().trim();
 
             //System.out.println(choixPays);
 
 
-            if(name1Input.getText().trim().equals("") || choixPays.equals("")){
+            if(name1Input.getText().trim().equals("") || choixPays == ""){
                 user1valid = false;
                 grid.setStyle(styleRed);
                 AlertBox.display("Attention", "Veuillez remplir les champs");
             }
             else{
 
+                boolean bot = false;
+                if (BOT1.getValue() == "Robot"){
+                    bot = true;
+                }
+
                 System.out.println(choixPays);
 
                 paysUsed.add(choixPays);
-                Model.addToListeJoueur(new Enqeteur("","", new Pays(choixPays), false, name1Input.getText().trim()));
+                Model.addToListeJoueur(new Enqeteur("","", new Pays(choixPays), bot, name1Input.getText().trim()));
                 user1valid = true;
                 window.setTitle("Home : Utilisateur 2");
                 grid.setStyle(styleGreen);
@@ -131,9 +146,9 @@ public class home extends Application {
 
 
 
-        grid.getChildren().addAll(name1Label, name1Input, pays1,pays1Field, btnUser2);
+        grid.getChildren().addAll(name1Label, name1Input, pays1,pays1Field, BOT1, btnUser2);
         //layout1.getChildren().addAll(label1, button1);
-        scene1 = new Scene(grid , 300,120);
+        scene1 = new Scene(grid , 300,130);
 
 
 

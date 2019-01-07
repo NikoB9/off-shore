@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-public class TreeView extends Application {
+public class Registre extends Application {
 
     Stage window;
     Scene scene, sceneQ;

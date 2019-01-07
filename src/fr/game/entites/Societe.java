@@ -4,8 +4,8 @@ import fr.game.entites.Personne;
 
 public class Societe extends Personne {
 	private int Possesseur;
-	public Societe( String nom, int idPays, int Possesseur) {
-		super( nom, idPays);
+	public Societe( String nom, Pays pays, int Possesseur) {
+		super( nom, pays);
 		this.Possesseur = Possesseur;
 	}
 
@@ -18,7 +18,7 @@ public class Societe extends Personne {
 		return "fr.game.entites.Societe{" +
 				"idPersonne=" + idPersonne +
 				", nom='" + nom + '\'' +
-				", idPays=" + idPays +
+				", Pays=" + pays +
 				'}';
 	}
 

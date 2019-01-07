@@ -35,7 +35,19 @@ public Pays(String nom) {
 
 }
 
-public ArrayList<Integer> getSocietesPersonne(int IDPersonne)
+	public String getNom() {
+		return Nom;
+	}
+
+	public void setNom(String nom) {
+		Nom = nom;
+	}
+
+	public static void setID(int ID) {
+		Pays.ID = ID;
+	}
+
+	public ArrayList<Integer> getSocietesPersonne(int IDPersonne)
 {
 	return this.ListeSocietes.get(IDPersonne);
 }

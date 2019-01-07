@@ -1,5 +1,8 @@
 package fr.game.vues;
 
+import fr.game.entites.Enqeteur;
+import fr.game.entites.Pays;
+import fr.game.model.Model;
 import fr.game.techniques.AlertBox;
 import javafx.application.Application;
 import javafx.geometry.Insets;
@@ -11,10 +14,18 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class home extends Application {
 
     Stage window;
     Scene scene1, scene2, scene3, scene4;
+    boolean user1valid, user2valid, user3valid, user4valid = false;
+
+    //Model laBdd = new Model();
+    List<Pays> lesPays = Model.getLesPays();
+    List<String> paysUsed;
 
     GridPane grid = new GridPane();
     GridPane grid2 = new GridPane();
@@ -69,7 +80,9 @@ public class home extends Application {
         javafx.scene.control.ComboBox<String> pays1 = new javafx.scene.control.ComboBox<>();
 
         //GetItems return the ObservableList object which you can add items to
-        pays1.getItems().addAll("France", "Californie", "Portugal", "Grande Bretagne", "Espagne");
+        for (Pays p : lesPays){
+            pays1.getItems().add(p.getNom());
+        }
 
         //Set a default value
         pays1.setValue("France");
@@ -93,10 +106,16 @@ public class home extends Application {
             window.setTitle("Home : Utilisateur 2");
 
             if(name1Input.getText().trim().equals("") || pays1.getValue().trim().equals("")){
+                user1valid = false;
+                grid.setStyle(styleRed);
                 AlertBox.display("Attention", "Veuillez remplir les champs");
             }
             else{
-                AlertBox.display("Bienvenue", "Bienvenue cher enquêteur.\n Bon courage ! ");
+
+                paysUsed.add(pays1.getValue().trim());
+                Model.addToListeJoueur(new Enqeteur("","", new Pays(pays1.getValue().trim()), false, name1Input.getText().trim()));
+                user1valid = true;
+                grid.setStyle(styleGreen);
                 window.setScene(scene2);
             }
 
@@ -138,10 +157,10 @@ public class home extends Application {
         javafx.scene.control.ComboBox<String> pays2 = new javafx.scene.control.ComboBox<>();
 
         //GetItems return the ObservableList object which you can add items to
-        pays2.getItems().addAll("France", "Californie", "Portugal", "Grande Bretagne", "Espagne");
-
-        //Set a default value
-        pays2.setValue("France");
+       // pays2.getItems().addAll("France", "Californie", "Portugal", "Grande Bretagne", "Espagne");
+        for (Pays p : lesPays){
+            pays2.getItems().add(p.getNom());
+        }
 
         //Add "TextField"
         pays2.setEditable(true);
@@ -157,21 +176,27 @@ public class home extends Application {
 
         btnUser3.setOnAction(e -> {
 
-            /*if(nameInput.getText().trim().equals("nico") && passwordField.getText().trim().equals("nico")){
-                AlertBox.display("Bienvenue", "Welcome");
-            }
-            else if (nameInput.getText().trim().equals("nico")){
-                AlertBox.display("Erreur", "Mot de passe incorrect");
-            }
-            else if(passwordField.getText().trim().equals("nico")){
-                AlertBox.display("Erreur", "Login incorrect");
+            if(name2Input.getText().trim().equals("") || pays2.getValue().trim().equals("")){
+                user2valid = false;
+                grid2.setStyle(styleRed);
+                AlertBox.display("Attention", "Veuillez remplir les champs");
             }
             else{
-                AlertBox.display("Erreur", "Login et mot de passe incorrect");
-            }*/
 
-            window.setScene(scene3);
-            window.setTitle("Home : Utilisateur 3");
+                if (!paysUsed.contains(pays2.getValue().trim())){
+                    paysUsed.add(pays2.getValue().trim());
+                    user2valid = true;
+                    grid2.setStyle(styleGreen);
+                    window.setTitle("Home : Utilisateur 3");
+                    window.setScene(scene3);
+                }
+                else {
+                    user2valid = false;
+                    grid2.setStyle(styleRed);
+                    AlertBox.display("Erreur", "Un autre enquêteur se charge déjà de ce pays.");
+                }
+
+            }
 
         });
 
@@ -216,10 +241,9 @@ public class home extends Application {
         javafx.scene.control.ComboBox<String> pays3 = new javafx.scene.control.ComboBox<>();
 
         //GetItems return the ObservableList object which you can add items to
-        pays3.getItems().addAll("France", "Californie", "Portugal", "Grande Bretagne", "Espagne");
-
-        //Set a default value
-        pays3.setValue("France");
+        for (Pays p : lesPays){
+            pays3.getItems().add(p.getNom());
+        }
 
         //Add "TextField"
         pays3.setEditable(true);
@@ -235,21 +259,27 @@ public class home extends Application {
 
         btnUser4.setOnAction(e -> {
 
-            /*if(nameInput.getText().trim().equals("nico") && passwordField.getText().trim().equals("nico")){
-                AlertBox.display("Bienvenue", "Welcome");
-            }
-            else if (nameInput.getText().trim().equals("nico")){
-                AlertBox.display("Erreur", "Mot de passe incorrect");
-            }
-            else if(passwordField.getText().trim().equals("nico")){
-                AlertBox.display("Erreur", "Login incorrect");
+            if(name3Input.getText().trim().equals("") || pays3.getValue().trim().equals("")){
+                user3valid = false;
+                grid3.setStyle(styleRed);
+                AlertBox.display("Attention", "Veuillez remplir les champs");
             }
             else{
-                AlertBox.display("Erreur", "Login et mot de passe incorrect");
-            }*/
 
-            window.setScene(scene4);
-            window.setTitle("Home : Utilisateur 4");
+                if (!paysUsed.contains(pays3.getValue().trim())){
+                    paysUsed.add(pays3.getValue().trim());
+                    user3valid = true;
+                    grid3.setStyle(styleGreen);
+                    window.setTitle("Home : Utilisateur 4");
+                    window.setScene(scene4);
+                }
+                else {
+                    user3valid = false;
+                    grid3.setStyle(styleRed);
+                    AlertBox.display("Erreur", "Un autre enquêteur se charge déjà de ce pays.");
+                }
+
+            }
 
         });
 
@@ -291,10 +321,9 @@ public class home extends Application {
         javafx.scene.control.ComboBox<String> pays4 = new javafx.scene.control.ComboBox<>();
 
         //GetItems return the ObservableList object which you can add items to
-        pays4.getItems().addAll("France", "Californie", "Portugal", "Grande Bretagne", "Espagne");
-
-        //Set a default value
-        pays4.setValue("France");
+        for (Pays p : lesPays){
+            pays4.getItems().add(p.getNom());
+        }
 
         //Add "TextField"
         pays4.setEditable(true);
@@ -310,18 +339,28 @@ public class home extends Application {
 
         btnJouer.setOnAction(e -> {
 
-            /*if(nameInput.getText().trim().equals("nico") && passwordField.getText().trim().equals("nico")){
-                AlertBox.display("Bienvenue", "Welcome");
-            }
-            else if (nameInput.getText().trim().equals("nico")){
-                AlertBox.display("Erreur", "Mot de passe incorrect");
-            }
-            else if(passwordField.getText().trim().equals("nico")){
-                AlertBox.display("Erreur", "Login incorrect");
+            if(name4Input.getText().trim().equals("") || pays4.getValue().trim().equals("")){
+                user4valid = false;
+                grid4.setStyle(styleRed);
+                AlertBox.display("Attention", "Veuillez remplir les champs");
             }
             else{
-                AlertBox.display("Erreur", "Login et mot de passe incorrect");
-            }*/
+                
+                if (!paysUsed.contains(pays4.getValue().trim()) && user1valid && user2valid && user3valid && user4valid){
+                    paysUsed.add(pays4.getValue().trim());
+                    user4valid = true;
+                    grid4.setStyle(styleGreen);
+                    AlertBox.display("Bienvenue", "Bienvenue chers enquêteurs.\nQue le meilleur gagne ! ");
+                    Model.peupler();
+                }
+                else {
+                    user4valid = false;
+                    grid4.setStyle(styleRed);
+                    AlertBox.display("Erreur", "Un autre enquêteur se charge déjà de ce pays.");
+                }
+                
+
+            }
 
 
         });

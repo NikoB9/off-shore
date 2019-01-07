@@ -6,8 +6,8 @@ import java.util.ArrayList;
 public class Contribuable extends Personne {
 	private String prenom;
 	
-	public Contribuable(String nom, String prenom, int idPays) {
-		super( nom, idPays);
+	public Contribuable(String nom, String prenom, Pays pays) {
+		super( nom, pays);
 		this.prenom = prenom;
 	}
 

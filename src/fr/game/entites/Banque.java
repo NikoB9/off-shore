@@ -5,8 +5,8 @@ import java.util.HashMap;
 public class Banque extends Societe {
 private HashMap<Integer,Integer> compte_Client; // idCompte , idPersonne
 
-public Banque(String nom, int idPays, int idPersonne) {
-	super(nom, idPays, idPersonne);
+public Banque(String nom, Pays pays, int idPersonne) {
+	super(nom, pays, idPersonne);
 	compte_Client = new HashMap<Integer,Integer>();
 	// TODO Auto-generated constructor stub
 }

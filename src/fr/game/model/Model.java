@@ -3,35 +3,120 @@ package fr.game.model;
 import fr.game.entites.*;
 ;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class Model {
 	private static String[] nom = {"Martin","Bernard","Thomas","Petit","Rober","Richard","Durand","Dubois","Moreau","Laurent","Simon","Michel","Lefebvre","Leroy","Roux","David","Bertrand","Morel","Fournier","Girad"};
 	private static String[] prenom = {"Gabriel","Jules","Lucas","Louis","Adam","Hugo","Léo","Raphaël","Ethan","Nathan","Louise","Emma","Jade","Chloé","Manon","Alice","Lina","Léa","Lola","Camille"};
 	private static String[] nomSociete = {"ehdsdf","xcvnf"};
-	private  static  HashMap<Integer, Pays> LesPays; // key -->
+	private  static List<Pays> LesPays = Arrays.asList(new Pays("France"),
+			new Pays("Californie"),
+			new Pays("Portugal"),
+			new Pays("Grande Bretagne"),
+			new Pays("Espagne"),
+			new Pays("Italie"),
+			new Pays("Laos"),
+			new Pays("Japon"),
+			new Pays("Mexique"),
+			new Pays("Suisse")
+			); // key -->
 	private  static  HashMap<Integer, Contribuable> LesContribuable; // key --> IdContribuable
 	private  static  HashMap<Integer, Banque> ListeBanque; // key --> IdBanque
 	private  static  HashMap<Integer,Societe> ListeSociete; // key --> IdSociete
-	private  static  HashMap<Integer,CompteBancaire> ListeCompteFrauduleParEnqueteur; // key --> IdEnqueteur
+	private  static  HashMap<Integer,CompteBancaire> ListeCompteFrauduleuxParEnqueteur; // key --> IdEnqueteur
 	private  static  HashMap<Integer,CompteBancaire> ListeCompte; // key --> IdCompte
 
-	private  static  ArrayList<CompteBancaire> ListeCompteFraudule;
+	private  static  ArrayList<CompteBancaire> ListeCompteFrauduleux;
 	private  static  ArrayList<Enqeteur> ListeJoueur;
 	private  static  ArrayList<Integer> IDsBanque;
 
-	public Model(HashMap<Integer, Pays> lesPays, HashMap<Integer, ArrayList<Societe>> listeSocietes) {
-		LesPays = new HashMap<Integer,Pays>();
-		ListeBanque =  new HashMap<Integer,Banque>();
-		ListeSociete =  new HashMap<Integer, Societe>();
-		ListeCompteFrauduleParEnqueteur = new HashMap<Integer,CompteBancaire>();
-		ListeJoueur = new ArrayList<Enqeteur>();
+	public Model() {
+		this.ListeBanque =  new HashMap<Integer,Banque>();
+		this.ListeSociete = new HashMap<Integer, Societe>();
+		this.ListeCompteFrauduleuxParEnqueteur = new HashMap<Integer,CompteBancaire>();
+		this.ListeJoueur = new ArrayList<Enqeteur>();
 	}
 
-	public static void addToListeCompteFrauduleParEnqueteur(CompteBancaire c,Enqeteur e ){
-		ListeCompteFrauduleParEnqueteur.put(e.getIdPersonne(), c);
+	public static void peupler(){
+		genererContribuables(50);
+		genererSocietes(50);
+		AjouterComptes();
+	}
+
+	public static List<Pays> getLesPays() {
+		return LesPays;
+	}
+
+	public static void setLesPays(List<Pays> lesPays) {
+		LesPays = lesPays;
+	}
+
+	public static HashMap<Integer, Contribuable> getLesContribuable() {
+		return LesContribuable;
+	}
+
+	public static void setLesContribuable(HashMap<Integer, Contribuable> lesContribuable) {
+		LesContribuable = lesContribuable;
+	}
+
+	public static HashMap<Integer, Banque> getListeBanque() {
+		return ListeBanque;
+	}
+
+	public static void setListeBanque(HashMap<Integer, Banque> listeBanque) {
+		ListeBanque = listeBanque;
+	}
+
+	public static HashMap<Integer, Societe> getListeSociete() {
+		return ListeSociete;
+	}
+
+	public static void setListeSociete(HashMap<Integer, Societe> listeSociete) {
+		ListeSociete = listeSociete;
+	}
+
+	public static HashMap<Integer, CompteBancaire> getListeCompteFrauduleuxParEnqueteur() {
+		return ListeCompteFrauduleuxParEnqueteur;
+	}
+
+	public static void setListeCompteFrauduleuxParEnqueteur(HashMap<Integer, CompteBancaire> ListeCompteFrauduleuxParEnqueteur) {
+		ListeCompteFrauduleuxParEnqueteur = ListeCompteFrauduleuxParEnqueteur;
+	}
+
+	public static HashMap<Integer, CompteBancaire> getListeCompte() {
+		return ListeCompte;
+	}
+
+	public static void setListeCompte(HashMap<Integer, CompteBancaire> listeCompte) {
+		ListeCompte = listeCompte;
+	}
+
+	public static ArrayList<CompteBancaire> getListeCompteFrauduleux() {
+		return ListeCompteFrauduleux;
+	}
+
+	public static void setListeCompteFrauduleux(ArrayList<CompteBancaire> ListeCompteFrauduleux) {
+		ListeCompteFrauduleux = ListeCompteFrauduleux;
+	}
+
+	public static ArrayList<Enqeteur> getListeJoueur() {
+		return ListeJoueur;
+	}
+
+	public static void setListeJoueur(ArrayList<Enqeteur> listeJoueur) {
+		ListeJoueur = listeJoueur;
+	}
+
+	public static ArrayList<Integer> getIDsBanque() {
+		return IDsBanque;
+	}
+
+	public static void setIDsBanque(ArrayList<Integer> IDsBanque) {
+		Model.IDsBanque = IDsBanque;
+	}
+
+	public static void addToListeCompteFrauduleuxParEnqueteur(CompteBancaire c, Enqeteur e ){
+		ListeCompteFrauduleuxParEnqueteur.put(e.getIdPersonne(), c);
 	}
 
 	public static void addToListeBanque(Banque element){
@@ -41,7 +126,7 @@ public class Model {
 		LesContribuable.put(element.getIdPersonne(), element);
 	}
 	public static void addToLesPays(Pays element){
-		LesPays.put(element.getIdPays(), element);
+		LesPays.add(element);
 	}
 	public static void addToListeJoueur(Enqeteur e) {
 		ListeJoueur.add(e);
@@ -49,15 +134,15 @@ public class Model {
 	public static void removeToListeJoueur(Enqeteur e) {
 		ListeJoueur.remove(e);
 	}
-	public static void addToListeCompteFraudule(CompteBancaire c){
+	public static void addToListeCompteFrauduleux(CompteBancaire c){
 		c.setEstFraudule(true);
-		ListeCompteFraudule.add(c);
+		ListeCompteFrauduleux.add(c);
 	}
 	public static void addToListeCompte(CompteBancaire c){
 		ListeCompte.put(c.getIdCompte(),c);
 	}
-	public static void removeToListeCompteFraudule(CompteBancaire c){
-		ListeCompteFraudule.remove(c);
+	public static void removeToListeCompteFrauduleux(CompteBancaire c){
+		ListeCompteFrauduleux.remove(c);
 	}
 
 	public static void getEnqueteur(int index){
@@ -112,24 +197,24 @@ public class Model {
 		}
 	}
 
-	public static void genrerContribuable (int nb){
+	public static void genererContribuables(int nb){
 		for (int i = 0; i < nb; i ++){
-			addToLesContribuable(new Contribuable(nom[(int) Math.random() * ( nom.length - 0 )],prenom[(int) Math.random() * ( prenom.length - 0 )],nb % Pays.getID()));
+			addToLesContribuable(new Contribuable(nom[(int) Math.random() * ( nom.length - 0 )],prenom[(int) Math.random() * ( prenom.length - 0 )],LesPays.get((int) Math.random() * ( LesPays.size() - 0 ))));
 		}
 	}
 
-	public static void genrerSociete(int nb){
+	public static void genererSocietes(int nb){
 		for (Map.Entry<Integer, Contribuable> entry : LesContribuable.entrySet()) {
 			Integer k = entry.getKey();
 			Contribuable v = entry.getValue();
-			AjouterSocietePersonne(v.getIdPersonne(), new Societe(nomSociete[(int) Math.random() * (nom.length - 0)], v.getIdPays(), v.getIdPersonne()), v.getIdPays());
+			AjouterSocietePersonne(v.getIdPersonne(), new Societe(nomSociete[(int) Math.random() * (nom.length - 0)], v.getPays(), v.getIdPersonne()), v.getPays().getIdPays());
 		}
 
 		for (int i = 0; i < nb; i ++){
 			int random = (int) Math.random() * ( Personne.getID() - 0 );
 			if (ListeSociete.containsKey(random))
 			{
-				AjouterSocietePersonne(ListeSociete.get(random).getIdPersonne(),new Societe(nomSociete[(int) Math.random() * ( nom.length - 0 )], ListeSociete.get(random).getIdPays(),ListeSociete.get(random).getIdPersonne()),ListeSociete.get(random).getIdPays());
+				AjouterSocietePersonne(ListeSociete.get(random).getIdPersonne(),new Societe(nomSociete[(int) Math.random() * ( nom.length - 0 )], ListeSociete.get(random).getPays(),ListeSociete.get(random).getIdPersonne()),ListeSociete.get(random).getPays().getIdPays());
 			}
 			else i--;
 		}
@@ -138,9 +223,9 @@ public class Model {
 			int random = (int) Math.random() * ( Personne.getID() - 0 );
 			if (ListeSociete.containsKey(random))
 			{
-				Banque b = new Banque(nomSociete[(int) Math.random() * ( nom.length - 0 )], ListeSociete.get(random).getIdPays(),ListeSociete.get(random).getIdPersonne());
+				Banque b = new Banque(nomSociete[(int) Math.random() * ( nom.length - 0 )], ListeSociete.get(random).getPays(),ListeSociete.get(random).getIdPersonne());
 				IDsBanque.add(b.getIdPersonne());
-				AjouterSocieteBanquePersonne(ListeSociete.get(random).getIdPersonne(),b,ListeSociete.get(random).getIdPays());
+				AjouterSocieteBanquePersonne(ListeSociete.get(random).getIdPersonne(),b,ListeSociete.get(random).getPays().getIdPays());
 			}
 			else j--;
 		}
@@ -164,6 +249,6 @@ public class Model {
 			CompteBancaire c = new CompteBancaire(codeBanque, (int) Math.random() * ( 1000000 - 0 ), v.getIdPersonne());
 			addToListeCompte(c);
 			ListeBanque.get(codeBanque).ajouterCompte(c.getIdCompte(),v.getIdPersonne());
-		};
+		}
 	}
 }

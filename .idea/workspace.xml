@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1af07926-5310-4d52-bbdc-9b7d3557e1b2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/fr/game/vues/Question.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fr/game/entites/CompteBancaire.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/game/entites/CompteBancaire.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fr/game/entites/Contribuable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/game/entites/Contribuable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fr/game/entites/Societe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/game/entites/Societe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fr/game/entites/Pays.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/game/entites/Pays.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/fr/game/model/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/game/model/Model.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fr/game/vues/Denonciation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/game/vues/Denonciation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fr/game/vues/Plateau.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/game/vues/Plateau.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fr/game/vues/home.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/game/vues/home.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fr/game/vues/testMenu.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,17 +15,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/fr/game/model/Model.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="139">
-              <caret line="315" column="69" selection-start-line="315" selection-start-column="69" selection-end-line="315" selection-end-column="69" />
+            <state relative-caret-position="179">
+              <caret line="58" column="41" selection-start-line="58" selection-start-column="41" selection-end-line="58" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2732#2733#0" expanded="true" />
                 <element signature="e#2768#2769#0" expanded="true" />
-                <element signature="e#2830#2831#0" expanded="true" />
-                <element signature="e#2875#2876#0" expanded="true" />
+                <element signature="e#2700#2701#0" expanded="true" />
+                <element signature="e#2746#2747#0" expanded="true" />
                 <element signature="e#2561#2689#0" />
                 <element signature="e#3070#3071#0" expanded="true" />
                 <element signature="e#3091#3092#0" expanded="true" />
@@ -68,8 +61,8 @@
                 <element signature="e#4633#4755#0" />
                 <element signature="e#5130#5131#0" expanded="true" />
                 <element signature="e#5177#5178#0" expanded="true" />
-                <element signature="e#5253#5254#0" expanded="true" />
-                <element signature="e#5335#5336#0" expanded="true" />
+                <element signature="e#5127#5128#0" expanded="true" />
+                <element signature="e#5209#5210#0" expanded="true" />
                 <element signature="e#5010#5135#0" />
                 <element signature="e#5518#5519#0" expanded="true" />
                 <element signature="e#5559#5560#0" expanded="true" />
@@ -78,15 +71,14 @@
                 <element signature="e#5712#5713#0" expanded="true" />
                 <element signature="e#5741#5742#0" expanded="true" />
                 <element signature="e#5457#5491#1" />
-                <element signature="e#5816#5817#0" expanded="true" />
-                <element signature="e#5492#5899#0" />
-                <element signature="e#5902#6557#0" />
-                <element signature="e#6562#7030#0" />
+                <element signature="e#5690#5691#0" expanded="true" />
                 <element signature="e#6940#7356#0" />
                 <element signature="e#7359#7773#0" />
                 <element signature="e#7776#8071#0" />
+                <element signature="e#8712#10065#0" />
                 <element signature="e#9429#10381#0" />
                 <element signature="e#10383#10659#0" />
+                <element signature="e#11299#12726#0" />
                 <element signature="e#11668#11878#0" />
                 <element signature="e#11762#11875#1" />
                 <element signature="e#12440#12575#0" />
@@ -173,7 +165,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/fr/game/vues/Denonciation.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="220">
@@ -188,8 +180,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/fr/game/entites/Pays.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="63" column="37" selection-start-line="63" selection-start-column="37" selection-end-line="63" selection-end-column="37" />
+            <state relative-caret-position="417">
+              <caret line="36" column="58" selection-start-line="36" selection-start-column="58" selection-end-line="36" selection-end-column="58" />
               <folding>
                 <element signature="e#426#427#0" expanded="true" />
                 <element signature="e#442#443#0" expanded="true" />
@@ -229,6 +221,7 @@
       <find>start</find>
       <find>Model.addToListeJoueur</find>
       <find>Banque</find>
+      <find>setJoueurCourant</find>
     </findStrings>
     <replaceStrings>
       <replace>javafx.scene.control.ComboBox&lt;String&gt;</replace>
@@ -254,15 +247,15 @@
         <option value="$PROJECT_DIR$/src/fr/game/entites/Personne.java" />
         <option value="$PROJECT_DIR$/src/fr/game/entites/Banque.java" />
         <option value="$PROJECT_DIR$/src/fr/game/entites/Societe.java" />
-        <option value="$PROJECT_DIR$/src/fr/game/entites/Pays.java" />
         <option value="$PROJECT_DIR$/src/fr/game/entites/Contribuable.java" />
         <option value="$PROJECT_DIR$/src/fr/game/vues/ListView.java" />
         <option value="$PROJECT_DIR$/src/fr/game/vues/testMenu.java" />
         <option value="$PROJECT_DIR$/src/fr/game/vues/home.java" />
-        <option value="$PROJECT_DIR$/src/fr/game/model/Model.java" />
         <option value="$PROJECT_DIR$/src/fr/game/vues/Plateau.java" />
         <option value="$PROJECT_DIR$/src/fr/game/vues/Question.java" />
         <option value="$PROJECT_DIR$/src/fr/game/vues/Denonciation.java" />
+        <option value="$PROJECT_DIR$/src/fr/game/entites/Pays.java" />
+        <option value="$PROJECT_DIR$/src/fr/game/model/Model.java" />
       </list>
     </option>
   </component>
@@ -339,7 +332,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546978487126" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546979556537" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
@@ -543,11 +536,18 @@
       <option name="project" value="LOCAL" />
       <updated>1546973701975</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="PlateauBtns">
+      <created>1546978500993</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1546978500993</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28104000" />
+    <option name="totallyTimeSpent" value="29170000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1513" height="973" extended-state="6" />
@@ -726,19 +726,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/fr/game/entites/Pays.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="63" column="37" selection-start-line="63" selection-start-column="37" selection-end-line="63" selection-end-column="37" />
-          <folding>
-            <element signature="e#426#427#0" expanded="true" />
-            <element signature="e#442#443#0" expanded="true" />
-            <element signature="e#469#470#0" expanded="true" />
-            <element signature="e#489#490#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/fr/game/entites/Banque.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
@@ -789,16 +776,53 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/fr/game/vues/Question.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="33" column="111" lean-forward="true" selection-start-line="33" selection-start-column="7" selection-end-line="33" selection-end-column="111" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fr/game/vues/Denonciation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="35" column="111" selection-start-line="35" selection-start-column="111" selection-end-line="35" selection-end-column="111" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fr/game/entites/Pays.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="417">
+          <caret line="36" column="58" selection-start-line="36" selection-start-column="58" selection-end-line="36" selection-end-column="58" />
+          <folding>
+            <element signature="e#426#427#0" expanded="true" />
+            <element signature="e#442#443#0" expanded="true" />
+            <element signature="e#469#470#0" expanded="true" />
+            <element signature="e#489#490#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fr/game/vues/Plateau.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="38" column="43" selection-start-line="38" selection-start-column="43" selection-end-line="38" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/fr/game/model/Model.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="315" column="69" selection-start-line="315" selection-start-column="69" selection-end-line="315" selection-end-column="69" />
+        <state relative-caret-position="179">
+          <caret line="58" column="41" selection-start-line="58" selection-start-column="41" selection-end-line="58" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2732#2733#0" expanded="true" />
             <element signature="e#2768#2769#0" expanded="true" />
-            <element signature="e#2830#2831#0" expanded="true" />
-            <element signature="e#2875#2876#0" expanded="true" />
+            <element signature="e#2700#2701#0" expanded="true" />
+            <element signature="e#2746#2747#0" expanded="true" />
             <element signature="e#2561#2689#0" />
             <element signature="e#3070#3071#0" expanded="true" />
             <element signature="e#3091#3092#0" expanded="true" />
@@ -834,8 +858,8 @@
             <element signature="e#4633#4755#0" />
             <element signature="e#5130#5131#0" expanded="true" />
             <element signature="e#5177#5178#0" expanded="true" />
-            <element signature="e#5253#5254#0" expanded="true" />
-            <element signature="e#5335#5336#0" expanded="true" />
+            <element signature="e#5127#5128#0" expanded="true" />
+            <element signature="e#5209#5210#0" expanded="true" />
             <element signature="e#5010#5135#0" />
             <element signature="e#5518#5519#0" expanded="true" />
             <element signature="e#5559#5560#0" expanded="true" />
@@ -844,42 +868,17 @@
             <element signature="e#5712#5713#0" expanded="true" />
             <element signature="e#5741#5742#0" expanded="true" />
             <element signature="e#5457#5491#1" />
-            <element signature="e#5816#5817#0" expanded="true" />
-            <element signature="e#5492#5899#0" />
-            <element signature="e#5902#6557#0" />
-            <element signature="e#6562#7030#0" />
+            <element signature="e#5690#5691#0" expanded="true" />
             <element signature="e#6940#7356#0" />
             <element signature="e#7359#7773#0" />
             <element signature="e#7776#8071#0" />
+            <element signature="e#8712#10065#0" />
             <element signature="e#9429#10381#0" />
             <element signature="e#10383#10659#0" />
+            <element signature="e#11299#12726#0" />
             <element signature="e#11668#11878#0" />
             <element signature="e#11762#11875#1" />
             <element signature="e#12440#12575#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fr/game/vues/Plateau.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="38" column="43" selection-start-line="38" selection-start-column="43" selection-end-line="38" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fr/game/vues/Question.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="33" column="111" lean-forward="true" selection-start-line="33" selection-start-column="7" selection-end-line="33" selection-end-column="111" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fr/game/vues/Denonciation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="35" column="111" selection-start-line="35" selection-start-column="111" selection-end-line="35" selection-end-column="111" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

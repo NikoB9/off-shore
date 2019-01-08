@@ -56,7 +56,7 @@ public class Model {
     }
 
     public static void setJoueurCourant(int joueurCourant) {
-        JoueurCourant = joueurCourant;
+        JoueurCourant = joueurCourant % 4;
     }
 
     public static void peupler(){
@@ -172,6 +172,7 @@ public class Model {
 	public static String aQuiEstCeCompte(int idCompte, int idBanque)
 	//retourne l'ID du possesseur du compte
 	{
+		Model.setJoueurCourant(Model.getJoueurCourant()+1);
 		System.out.println(idCompte +" "+idBanque);
 		if(ListeBanque.containsKey(idBanque)) {
 			HistoriqueQuestion.add("a Qui Est Ce Compte " + idCompte + ", dans la banque : " + idBanque);
@@ -184,6 +185,7 @@ public class Model {
 	public static String QuelleSocietesCettePersooneA(int idPersonne, int idPays)
 	// retourne la liste des IDs des societes de la personne
 	{
+		Model.setJoueurCourant(Model.getJoueurCourant()+1);
 		if(LesPays.containsKey(idPays)){
 			if (LesPays.get(idPays).paysContientPersonne(idPersonne)){
 				String retour="";
@@ -205,6 +207,7 @@ public class Model {
 	public static String QuiPossedeCetteSociete(int idSociete)
 	// retourne l'ID du possesseur
 	{
+		Model.setJoueurCourant(Model.getJoueurCourant()+1);
 		String retour ="Cette societe n'existe pas";
 		if (ListeSociete.containsKey(idSociete)){
 			HistoriqueQuestion.add("Qui Possede Cette Societe : "+idSociete);
@@ -309,6 +312,7 @@ public class Model {
 		return null;
 	}
 	public static String denoncer(int idPays, int idPersonne, int idBanque, int idCompte, int idJouer){
+		Model.setJoueurCourant(Model.getJoueurCourant()+1);
 		if (!(LesPays.containsKey(idPays) || LesContribuable.containsKey(idPersonne) || ListeBanque.containsKey(idBanque) || ListeCompte.containsKey(idCompte))){
 			return "Un des champs au moins est erroné";
 		}
@@ -317,6 +321,7 @@ public class Model {
 		}
 		System.out.println(ListeBanque.get(idBanque).getPays().getIdPays());
 		if(ListeBanque.get(idBanque).getPays().getIdPays() == idPays){
+			System.out.println(ListeCompte.get(idCompte).getIdPersonne());
 			if(LesPays.get(idPays).paysContientPersonne(ListeCompte.get(idCompte).getIdPersonne())){
 				HistoriqueDenonciation.add("Dans le pays : "+idPays+", le contribualble : "+idPersonne + ", numro de compte : "+idCompte);
 				ListeCompteFrauduleux.remove(ListeCompte.get(idCompte));
@@ -328,7 +333,7 @@ public class Model {
 				if (Model.ListeCompteFrauduleux.size() == 0){
                     return " partie terminé !!";
                 }
-				Model.setJoueurCourant(Model.getJoueurCourant()+1);
+
 				return "Denonciation effectué !!";
 			}
 			return "debug";

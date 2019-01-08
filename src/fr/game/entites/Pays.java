@@ -32,9 +32,9 @@ public Pays(String nom) {
 		this.ListeSocietes.get(idPersonne).add(idSociete);
 	}
 	else{
-		ArrayList<Integer> temp = new ArrayList<Integer>();
-		temp.add(idSociete);
-		this.ListeSocietes.put(idPersonne, temp);
+
+		this.ListeSocietes.put(idPersonne, new ArrayList<Integer>());
+		this.ListeSocietes.get(idPersonne).add(idSociete);
 	}
 
 }

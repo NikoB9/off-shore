@@ -9,7 +9,9 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.SelectionMode;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
@@ -68,7 +70,35 @@ public class Plateau extends Application {
         //layout.getChildren().addAll(listView,button,newValue,oldValue);
         layout.getChildren().addAll(listView,LabelID,ID,LabelID2,ID2,button,question);
 
-        scene = new Scene(layout, 400, 500);
+        Button goInfos = new Button("Registre");
+        Button goD = new Button("Dénonciation");
+
+        goD.setOnAction(e -> {
+            Application a = new Denonciation();
+            try {
+                a.start(new Stage());
+            } catch (Exception e1) {
+                e1.printStackTrace();
+            }
+        });
+
+        goInfos.setOnAction(e -> {
+                    Application a = new Registre();
+
+                    try {
+                        a.start(new Stage());
+                    } catch (Exception e1) {
+                        e1.printStackTrace();
+                    }
+                });
+
+        BorderPane cadre = new BorderPane();
+        cadre.setPadding(new Insets(10,10,10,10));
+        cadre.setCenter(layout);
+        cadre.setTop(goInfos);
+        cadre.setBottom(goD);
+
+        scene = new Scene(cadre, 400, 500);
 
         window.setScene(scene);
 

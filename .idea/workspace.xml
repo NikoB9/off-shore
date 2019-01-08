@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1af07926-5310-4d52-bbdc-9b7d3557e1b2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fr/game/vues/home.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/game/vues/home.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fr/game/vues/Plateau.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/game/vues/Plateau.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -59,20 +59,29 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fr/game/vues/ListView.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/fr/game/vues/Plateau.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1564">
-              <caret line="103" selection-start-line="103" selection-end-line="103" />
+            <state relative-caret-position="149">
+              <caret line="76" column="46" selection-start-line="76" selection-start-column="46" selection-end-line="76" selection-end-column="46" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/fr/game/vues/Registre.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="24" selection-end-column="64" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/fr/game/vues/home.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="313">
-              <caret line="495" column="41" selection-start-line="495" selection-start-column="41" selection-end-line="495" selection-end-column="41" />
+            <state relative-caret-position="201">
+              <caret line="475" column="24" lean-forward="true" selection-start-line="475" selection-start-column="24" selection-end-line="480" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#5510#5518#0" expanded="true" />
@@ -172,6 +181,7 @@
         <option value="$PROJECT_DIR$/src/fr/game/vues/ListView.java" />
         <option value="$PROJECT_DIR$/src/fr/game/model/Model.java" />
         <option value="$PROJECT_DIR$/src/fr/game/vues/home.java" />
+        <option value="$PROJECT_DIR$/src/fr/game/vues/Plateau.java" />
       </list>
     </option>
   </component>
@@ -227,7 +237,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546970062662" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546973596076" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
@@ -410,7 +420,21 @@
       <option name="project" value="LOCAL" />
       <updated>1546967514506</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="DernièreVersionHome">
+      <created>1546970073352</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1546970073353</updated>
+    </task>
+    <task id="LOCAL-00013" summary="ModifNomPlateau">
+      <created>1546970155515</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1546970155515</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -428,7 +452,7 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32977462" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3285968" />
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.28419182" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -485,7 +509,9 @@
     <MESSAGE value="methodes add pour tout le model" />
     <MESSAGE value="HomeFonctionnel" />
     <MESSAGE value="HomeFonctionnel2" />
-    <option name="LAST_COMMIT_MESSAGE" value="HomeFonctionnel2" />
+    <MESSAGE value="DernièreVersionHome" />
+    <MESSAGE value="ModifNomPlateau" />
+    <option name="LAST_COMMIT_MESSAGE" value="ModifNomPlateau" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/CompteBancaire.java" />
@@ -619,13 +645,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/fr/game/vues/ListView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1564">
-          <caret line="103" selection-start-line="103" selection-end-line="103" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/fr/game/entites/Contribuable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -654,15 +673,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/fr/game/vues/Registre.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="24" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/fr/game/vues/home.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="495" column="41" selection-start-line="495" selection-start-column="41" selection-end-line="495" selection-end-column="41" />
+        <state relative-caret-position="201">
+          <caret line="475" column="24" lean-forward="true" selection-start-line="475" selection-start-column="24" selection-end-line="480" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#5510#5518#0" expanded="true" />
             <element signature="e#6253#6261#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fr/game/vues/Plateau.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="76" column="46" selection-start-line="76" selection-start-column="46" selection-end-line="76" selection-end-column="46" />
         </state>
       </provider>
     </entry>

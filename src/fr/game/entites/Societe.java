@@ -9,6 +9,10 @@ public class Societe extends Personne {
 		this.Possesseur = Possesseur;
 	}
 
+	/**
+	 * Retourne le possesseur de la societe
+	 * @return
+	 */
 	public int getPossesseur() {
 		return Possesseur;
 	}

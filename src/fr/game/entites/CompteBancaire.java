@@ -24,18 +24,35 @@ public class CompteBancaire {
 	public String toString() {
 		return "idCompte=" + idCompte + ", solde=" + solde +" ,pays : "+ Model.getListeBanque().get(codeBanque).getPays().getNom();
 	}
+
+	/**
+	 * retourne l'id du compte instancié
+	 * @return
+	 */
 	public int getIdCompte() {
 		return idCompte;
 	}
-	
+
+	/**
+	 * retourne lid du possesseur compte
+	 * @return
+	 */
 	public int getIdPersonne() {
 		return idPersonne;
 	}
 
+	/**
+	 * Déclare le compte frauduleux ou non
+	 * @param estFraudule
+	 */
 	public void setEstFraudule(boolean estFraudule) {
 		this.estFraudule = estFraudule;
 	}
 
+	/**
+	 * retourne si le compte est frauduleux ou non
+	 * @return
+	 */
 	public boolean isEstFraudule() {
 		return estFraudule;
 	}

@@ -11,6 +11,13 @@ import javafx.stage.Stage;
 
 public class AlertBox {
 
+    /**
+     *Créer une fenêtre permettant de faire un message d'alerte à l'utilisateur
+     * Il est possible de choisir un titre et un message pour se servir de l'alerte
+     * à tout moment.
+     * @param title
+     * @param message
+     */
     public static void display(String title, String message){
         Stage window = new Stage();
 

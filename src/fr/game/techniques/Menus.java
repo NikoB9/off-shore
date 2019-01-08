@@ -25,11 +25,11 @@ public class Menus extends Application {
         window.setTitle("MENUS");
 
         //File menu
-        Menu fileMenu = new Menu("File");
+        Menu fileMenu = new Menu("Aide");
 
         //Menu items
-        fileMenu.getItems().add(new MenuItem("New Project.."));
-        fileMenu.getItems().addAll(new MenuItem("Open.."), new MenuItem("New Project.."));
+        fileMenu.getItems().add(new MenuItem("Registre"));
+        fileMenu.getItems().addAll(new MenuItem("Infos"), new MenuItem("Historique"));
 
     }
 }

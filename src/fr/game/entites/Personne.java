@@ -13,14 +13,26 @@ public abstract class Personne {
 	}
 	abstract Personne getPersonne();
 
+	/**
+	 * Retourne le pays de la personne instanciée
+	 * @return
+	 */
 	public Pays getPays() {
 		return pays;
 	}
 
+	/**
+	 * Retourne l'id de la personne instanciée
+	 * @return
+	 */
 	public static int getID() {
 		return ID;
 	}
 
+	/**
+	 * Retourne l'id de la personne instanciée
+	 * @return
+	 */
 	public int getIdPersonne() {
 		return idPersonne;
 	}

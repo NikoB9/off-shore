@@ -59,10 +59,8 @@ public Pays(String nom) {
 	}
 	@Override
 	public String toString() {
-		return "fr.game.entites.Pays{" +
+		return
 				"Nom='" + Nom + '\'' +
-				", IdPays=" + IdPays +
-				", ListeSocietes=" + ListeSocietes +
-				'}';
+				", IdPays=" + IdPays ;
 	}
 }

@@ -20,7 +20,7 @@ public class CompteBancaire {
 	}
 	@Override
 	public String toString() {
-		return "fr.game.entites.CompteBancaire [idCompte=" + idCompte + ", solde=" + solde + "]";
+		return "idCompte=" + idCompte + ", solde=" + solde ;
 	}
 	public int getIdCompte() {
 		return idCompte;

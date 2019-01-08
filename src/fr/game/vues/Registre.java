@@ -24,23 +24,12 @@ public class Registre extends Application {
     Button goHistoriqueQuestions = new Button("Questions");
     Button goHistoriqueDeclaration = new Button("Déclarations");
 
-    Model model = new Model();
-    ArrayList<CompteBancaire> l_compteSuspects = model.getListeCompteFrauduleux();
-    HashMap<Integer, ArrayList<CompteBancaire>> l_compteFrauduleuxParEnqueteur = model.getListeCompteFrauduleuxParEnqueteur();
-    HashMap<Integer, Banque> l_banques = model.getListeBanque();
-    HashMap<Integer, Societe> l_societes = model.getListeSociete();
-    HashMap<Integer, CompteBancaire> l_comptes = model.getListeCompte();
-    ArrayList<Enqeteur> l_joeurs = model.getListeJoueur();
-    HashMap<Integer, Contribuable> l_contribuables = model.getLesContribuable();
-    HashMap<Integer, Pays> l_pays = model.getLesPays();
-
-
 
     javafx.scene.control.TreeView<String> tree;
 
-    public static void main(String[] args){
+    /*public static void main(String[] args){
         launch(args);
-    }
+    }*/
 
     @Override
     public void start(Stage primaryStage){
@@ -82,11 +71,11 @@ public class Registre extends Application {
 
         //Pays
         pays = makeBranch("Liste des pays", title);
-        if (l_pays.size() == 0){
+        if (Model.getLesPays().size() == 0){
             makeBranch("Aucun pays", pays);
         }
         else {
-            for (Map.Entry<Integer, Pays> e : l_pays.entrySet()) {
+            for (Map.Entry<Integer, Pays> e : Model.getLesPays().entrySet()) {
                 Integer key = e.getKey();
                 Pays s_pays = e.getValue();
                 makeBranch(s_pays.toString(), pays);
@@ -96,33 +85,33 @@ public class Registre extends Application {
 
         //banques
         banques = makeBranch("Liste des banques", title);
-        if (l_banques.size() == 0){
+        if (Model.getListeBanque().size() == 0){
             makeBranch("Aucune banque", banques);
         }
         else {
-            for (Map.Entry<Integer, Banque> e : l_banques.entrySet()) {
+            for (Map.Entry<Integer, Banque> e : Model.getListeBanque().entrySet()) {
                 makeBranch(e.getValue().toString(), banques);
             }
         }
 
         //comptes
         comptes = makeBranch("Liste des comptes bancaire", title);
-        if (l_comptes.size() == 0){
+        if (Model.getListeCompte().size() == 0){
             makeBranch("Aucun compte bancaire", comptes);
         }
         else {
-            for (Map.Entry<Integer, CompteBancaire> e : l_comptes.entrySet()) {
+            for (Map.Entry<Integer, CompteBancaire> e : Model.getListeCompte().entrySet()) {
                 makeBranch(e.getValue().toString(), comptes);
             }
         }
 
         //contribuables
         contribuables = makeBranch("Liste des contribuables", title);
-        if (l_contribuables.size() == 0){
+        if (Model.getLesContribuable().size() == 0){
             makeBranch("Aucun contribuable", contribuables);
         }
         else {
-            for (Map.Entry<Integer, Contribuable> e : l_contribuables.entrySet()) {
+            for (Map.Entry<Integer, Contribuable> e : Model.getLesContribuable().entrySet()) {
                 makeBranch(e.getValue().toString(), contribuables);
             }
         }
@@ -130,11 +119,11 @@ public class Registre extends Application {
 
         //societes
         societes = makeBranch("Liste des sociétés", title);
-        if (l_societes.size() == 0){
+        if (Model.getListeSociete().size() == 0){
             makeBranch("Aucune société", societes);
         }
         else {
-            for (Map.Entry<Integer, Societe> e : l_societes.entrySet()) {
+            for (Map.Entry<Integer, Societe> e : Model.getListeSociete().entrySet()) {
                 makeBranch(e.getValue().toString(), societes);
             }
         }
@@ -142,11 +131,11 @@ public class Registre extends Application {
 
         //Comptes suspects
         comptesSuspects = makeBranch("Compte Suspects", title);
-        if (l_compteSuspects.size() == 0){
+        if (Model.getListeCompteFrauduleux().size() == 0){
             makeBranch("Aucun compte suspect", comptesSuspects);
         }
         else {
-            for (CompteBancaire e : l_compteSuspects) {
+            for (CompteBancaire e : Model.getListeCompteFrauduleux()) {
                 makeBranch(e.toString(), comptesSuspects);
             }
         }
@@ -156,16 +145,16 @@ public class Registre extends Application {
 
         comptesDécouverts = makeBranch("Compte Découverts", title);
 
-        if (l_compteFrauduleuxParEnqueteur.size() == 0 || l_joeurs.size() == 0){
+        if (Model.getListeCompteFrauduleuxParEnqueteur().size() == 0 || Model.getListeJoueur().size() == 0){
             makeBranch("Aucun compte frauduleux découvert", comptesDécouverts);
         }
         else {
             ArrayList<TreeItem<String>> user = new ArrayList<>();
-            user.add(makeBranch(l_joeurs.get(0).getPseudo(), comptesDécouverts));
-            user.add(makeBranch(l_joeurs.get(1).getPseudo(), comptesDécouverts));
-            user.add(makeBranch(l_joeurs.get(2).getPseudo(), comptesDécouverts));
-            user.add(makeBranch(l_joeurs.get(3).getPseudo(), comptesDécouverts));
-            for (Map.Entry<Integer, ArrayList<CompteBancaire>> e : l_compteFrauduleuxParEnqueteur.entrySet()) {
+            user.add(makeBranch(Model.getListeJoueur().get(0).getPseudo(), comptesDécouverts));
+            user.add(makeBranch(Model.getListeJoueur().get(1).getPseudo(), comptesDécouverts));
+            user.add(makeBranch(Model.getListeJoueur().get(2).getPseudo(), comptesDécouverts));
+            user.add(makeBranch(Model.getListeJoueur().get(3).getPseudo(), comptesDécouverts));
+            for (Map.Entry<Integer, ArrayList<CompteBancaire>> e : Model.getListeCompteFrauduleuxParEnqueteur().entrySet()) {
 
                 for (CompteBancaire c : e.getValue()){
                     makeBranch(c.toString(), user.get(e.getKey()));

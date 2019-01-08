@@ -49,12 +49,12 @@ public class Model {
 		this.LesPays.put(6,new Pays("Japon"));
 		this.LesPays.put(7,new Pays("Mexique"));
 		this.LesPays.put(8,new Pays("Suisse"));
-
+        peupler();
 	}
 
 	public static void peupler(){
-		genererContribuables(1);
-		genererSocietes(4);
+		genererContribuables(10);
+		genererSocietes(40);
 		AjouterComptes();
 		creerComptefrauduleux();
 	}
@@ -232,7 +232,7 @@ public class Model {
 	public static void genererContribuables(int nb){
 		for (int i = 0; i < nb; i ++){
 
-			addToLesContribuable(new Contribuable(nom[(int) Math.random() * ( nom.length - 0 )],prenom[(int) Math.random() * ( prenom.length - 0 )],LesPays.get((int) Math.random() * ( LesPays.size() - 0 ))));
+			addToLesContribuable(new Contribuable(nom[(int) (Math.random() * ( nom.length - 0 ))],prenom[(int) (Math.random() * ( prenom.length - 0 ))],LesPays.get((int) (Math.random() * ( LesPays.size() - 0 )))));
 		}
 	}
 
@@ -240,13 +240,13 @@ public class Model {
 		for (Map.Entry<Integer, Contribuable> entry : LesContribuable.entrySet()) {
 			Integer k = entry.getKey();
 			Contribuable v = entry.getValue();
-			AjouterSocietePersonne(v.getIdPersonne(), new Societe(nomSociete[(int) Math.random() * (nom.length - 0)], v.getPays(), v.getIdPersonne()), v.getPays().getIdPays());
+			AjouterSocietePersonne(v.getIdPersonne(), new Societe(nomSociete[(int) (Math.random() * (nomSociete.length - 0))], v.getPays(), v.getIdPersonne()), v.getPays().getIdPays());
 		}
 		for (int i = 0; i < nb; i ++){
 			int random = (int) (Math.random() * ( Personne.getID() - 0 ));
 			if (ListeSociete.containsKey(random))
 			{
-				AjouterSocietePersonne(ListeSociete.get(random).getIdPersonne(),new Societe(nomSociete[(int) Math.random() * ( nom.length - 0 )], ListeSociete.get(random).getPays(),ListeSociete.get(random).getIdPersonne()),ListeSociete.get(random).getPays().getIdPays());
+				AjouterSocietePersonne(ListeSociete.get(random).getIdPersonne(),new Societe(nomSociete[(int) (Math.random() * ( nomSociete.length - 0 ))], ListeSociete.get(random).getPays(),ListeSociete.get(random).getIdPersonne()),ListeSociete.get(random).getPays().getIdPays());
 			}
 			else i--;
 		}
@@ -255,7 +255,7 @@ public class Model {
 			int random = (int) (Math.random() * ( Personne.getID() - 0 ));
 			if (ListeSociete.containsKey(random))
 			{
-				Banque b = new Banque(nomSociete[(int) Math.random() * ( nom.length - 0 )], ListeSociete.get(random).getPays(),ListeSociete.get(random).getIdPersonne());
+				Banque b = new Banque(nomSociete[(int) (Math.random() * ( nomSociete.length - 0 ))], ListeSociete.get(random).getPays(),ListeSociete.get(random).getIdPersonne());
 				IDsBanque.add(b.getIdPersonne());
 				System.out.println(b.getIdPersonne());
 				AjouterSocieteBanquePersonne(ListeSociete.get(random).getIdPersonne(),b,ListeSociete.get(random).getPays().getIdPays());
@@ -270,7 +270,7 @@ public class Model {
 			codeBanque = IDsBanque.get((int) (Math.random() * ( IDsBanque.size() - 0 )));
 			Integer k = entry.getKey();
 			Societe v = entry.getValue();
-			CompteBancaire c = new CompteBancaire(codeBanque, (int) Math.random() * ( 1000000 - 0 ), v.getIdPersonne());
+			CompteBancaire c = new CompteBancaire(codeBanque, (int) (Math.random() * ( 1000000 - 0 )), v.getIdPersonne());
 			addToListeCompte(c);
 			ListeBanque.get(codeBanque).ajouterCompte(c.getIdCompte(),v.getIdPersonne());
 		}
@@ -279,7 +279,7 @@ public class Model {
 			codeBanque = IDsBanque.get((int) (Math.random() * ( IDsBanque.size() - 0 )));
 			Integer k = entry.getKey();
 			Contribuable v = entry.getValue();
-			CompteBancaire c = new CompteBancaire(codeBanque, (int) Math.random() * ( 1000000 - 0 ), v.getIdPersonne());
+			CompteBancaire c = new CompteBancaire(codeBanque, (int) (Math.random() * ( 1000000 - 0 )), v.getIdPersonne());
 			addToListeCompte(c);
 			ListeBanque.get(codeBanque).ajouterCompte(c.getIdCompte(),v.getIdPersonne());
 		}

@@ -12,11 +12,10 @@ public class testMenu extends Application {
     Stage window;
     Scene scene;
     Button button;
-    Button button2, button3;
+    Button button2, button3,button4;
 
     public static void main(String[] args){
         Model m = new Model();
-        Model.peupler();
         launch(args);
     }
     public void start(Stage primaryStage) throws Exception {
@@ -28,9 +27,11 @@ public class testMenu extends Application {
         button = new Button("Denoncer !");
         button2 = new Button("Chercher !");
         button3 = new Button("Home !");
+        button4 = new Button("Registre");
         Application a = new Denonciation();
         Application b = new ListView();
         Application c = new home();
+        Application d = new Registre();
 
 
 
@@ -56,10 +57,19 @@ public class testMenu extends Application {
             }
         });
 
+        button4.setOnAction(e -> {
+            try {
+                d.start(new Stage());
+            } catch (Exception e1) {
+                e1.printStackTrace();
+            }
+        });
+
+
         VBox layout = new VBox(10);
         layout.setPadding(new Insets(20,20,20,20));
         //layout.getChildren().addAll(listView,button,newValue,oldValue);
-        layout.getChildren().addAll(button, button2,button3);
+        layout.getChildren().addAll(button, button2,button3,button4);
 
         scene = new Scene(layout, 400, 500);
 

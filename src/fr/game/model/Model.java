@@ -1,14 +1,16 @@
 package fr.game.model;
 
 import fr.game.entites.*;
+import fr.game.techniques.AlertBox;
 ;
 
 import java.util.*;
 
 public class Model {
-    private static final int nbJoueur= 1;
-    private static final int nbSociete= 4;
+    private static final int nbJoueur=10;
+    private static final int nbSociete= 15;
     private static int JoueurCourant = 0;
+    private static int debutBanque,finBanque;
 	private static String[] nom = {"Martin","Bernard","Thomas","Petit","Rober","Richard","Durand","Dubois","Moreau","Laurent","Simon","Michel","Lefebvre","Leroy","Roux","David","Bertrand","Morel","Fournier","Girad"};
 	private static String[] prenom = {"Gabriel","Jules","Lucas","Louis","Adam","Hugo","Léo","Raphaël","Ethan","Nathan","Louise","Emma","Jade","Chloé","Manon","Alice","Lina","Léa","Lola","Camille"};
 	private static String[] nomSociete = {"ehdsdf","xcvnf"};
@@ -24,7 +26,6 @@ public class Model {
 	private  static  ArrayList<Integer> IDsBanque;
 	private  static  ArrayList<String> HistoriqueDenonciation;
 	private  static  ArrayList<String> HistoriqueQuestion;
-
 
 	public Model() {
 		this.ListeBanque =  new HashMap<Integer,Banque>();
@@ -51,74 +52,124 @@ public class Model {
         peupler();
 	}
 
+	/**
+	 *
+	 * @return JoueurCourant
+	 * retourne le joueur courant
+	 */
     public static int getJoueurCourant() {
         return JoueurCourant;
     }
 
+	/**
+	 *
+	 * @param joueurCourant
+	 * le joueur a modifier
+	 *
+	 */
     public static void setJoueurCourant(int joueurCourant) {
         JoueurCourant = joueurCourant % 4;
+        if (ListeJoueur.get(JoueurCourant).isRobot()){
+			AlertBox.display("INFORMATION", "le robot: " + ListeJoueur.get(JoueurCourant).getPseudo() +" a joué" );
+			faireJouerRobot(JoueurCourant);
+		}
     }
 
-    public static void peupler(){
+	public static void peupler(){
 		genererContribuables(nbJoueur);
 		genererSocietes(4);
 		AjouterComptes();
 		creerComptefrauduleux();
 	}
 
+	/**
+	 *
+	 * @return
+	 * HashMap contenant les pays
+	 */
 	public static HashMap<Integer, Pays> getLesPays() {
 		return LesPays;
 	}
 
+	/**
+	 *
+	 * @return
+	 * HashMap contenant les contribuable
+	 */
 	public static HashMap<Integer, Contribuable> getLesContribuable() {
 		return LesContribuable;
 	}
 
-	public static void setLesContribuable(HashMap<Integer, Contribuable> lesContribuable) {
-		LesContribuable = lesContribuable;
-	}
-
+	/**
+	 *
+	 * @return
+	 * HashMap contenant les Banques
+	 */
 	public static HashMap<Integer, Banque> getListeBanque() {
 		return ListeBanque;
 	}
 
-	public static void setListeBanque(HashMap<Integer, Banque> listeBanque) {
+	/*public static void setListeBanque(HashMap<Integer, Banque> listeBanque) {
 		ListeBanque = listeBanque;
-	}
+	}*/
 
+	/**
+	 *
+	 * @return
+	 * HashMap contenant les societes
+	 */
 	public static HashMap<Integer, Societe> getListeSociete() {
 		return ListeSociete;
 	}
 
-	public static void setListeSociete(HashMap<Integer, Societe> listeSociete) {
+	/*public static void setListeSociete(HashMap<Integer, Societe> listeSociete) {
 		ListeSociete = listeSociete;
-	}
+	}*/
 
+	/**
+	 *
+	 * @return
+	 * HashMap contenant les les comptes par enqueteur
+	 */
 	public static HashMap<Integer, ArrayList<CompteBancaire>> getListeCompteFrauduleuxParEnqueteur() {
 		return ListeCompteFrauduleuxParEnqueteur;
 	}
 
-
+	/**
+	 *
+	 * @return
+	 * HashMap contenant les comptes
+	 */
 	public static HashMap<Integer, CompteBancaire> getListeCompte() {
 		return ListeCompte;
 	}
 
-	public static void setListeCompte(HashMap<Integer, CompteBancaire> listeCompte) {
+	/*public static void setListeCompte(HashMap<Integer, CompteBancaire> listeCompte) {
 		ListeCompte = listeCompte;
-	}
+	}*/
 
+	/**
+	 *
+	 * @return
+	 * ArrayList contenant les compte frauduleux
+	 */
 	public static ArrayList<CompteBancaire> getListeCompteFrauduleux() {
 		return ListeCompteFrauduleux;
 	}
 
-	public static void setListeCompteFrauduleux(ArrayList<CompteBancaire> ListeCompteFrauduleux) {
+/*	public static void setListeCompteFrauduleux(ArrayList<CompteBancaire> ListeCompteFrauduleux) {
 		ListeCompteFrauduleux = ListeCompteFrauduleux;
-	}
+	}*/
 
+	/**
+	 *
+	 * @return
+	 * ArrayList contenant les joueur
+	 */
 	public static ArrayList<Enqeteur> getListeJoueur() {
 		return ListeJoueur;
 	}
-
+	/*
 	public static void setListeJoueur(ArrayList<Enqeteur> listeJoueur) {
 		ListeJoueur = listeJoueur;
 	}
@@ -131,44 +182,83 @@ public class Model {
 		Model.IDsBanque = IDsBanque;
 	}
 
-	/*public static void addToListeCompteFrauduleuxParEnqueteur(CompteBancaire c, Enqeteur e ){
+	public static void addToListeCompteFrauduleuxParEnqueteur(CompteBancaire c, Enqeteur e ){
 		ListeCompteFrauduleuxParEnqueteur.put(e.getIdPersonne(), c);
-	}*/
+	}
 
 	public static void addToListeBanque(Banque element){
 		ListeBanque.put(element.getIdPersonne(), element);
 	}
-	public static void addToLesContribuable(Contribuable element){
-		LesContribuable.put(element.getIdPersonne(), element);
-	}
 	public static void addToLesPays(Pays element){
 		LesPays.put(element.getIdPays(),element);
 	}
-	public static void addToListeJoueur(Enqeteur e) {
-		ListeJoueur.add(e);
-	}
-	public static void removeToListeJoueur(Enqeteur e) {
+		public static void removeToListeJoueur(Enqeteur e) {
 		ListeJoueur.remove(e);
 	}
-	public static void addToListeCompteFrauduleux(CompteBancaire c){
-		c.setEstFraudule(true);
-		ListeCompteFrauduleux.add(c);
-	}
-	public static void addToListeCompte(CompteBancaire c){
-		ListeCompte.put(c.getIdCompte(),c);
-	}
-	public static void removeToListeCompteFrauduleux(CompteBancaire c){
+
+		public static void removeToListeCompteFrauduleux(CompteBancaire c){
 		ListeCompteFrauduleux.remove(c);
 	}
 
 	public static void getEnqueteur(int index){
 		ListeJoueur.get(index);
 	}
+	*/
 
+	/**
+	 *
+	 * @param element
+	 * Le contribuable a ajouter a la liste des contribuables
+	 */
+	public static void addToLesContribuable(Contribuable element){
+		LesContribuable.put(element.getIdPersonne(), element);
+	}
+
+	/**
+	 *
+	 * @param e
+	 * L'enqueteur a ajouter a la liste des enqueteurs
+	 */
+	public static void addToListeJoueur(Enqeteur e) {
+		ListeJoueur.add(e);
+	}
+
+	/**
+	 *
+	 * @param c
+	 * Le compte a ajouter a la liste des comptes frauduleux
+	 */
+	public static void addToListeCompteFrauduleux(CompteBancaire c){
+		c.setEstFraudule(true);
+		ListeCompteFrauduleux.add(c);
+	}
+
+	/**
+	 *
+	 * @param c
+	 * Le compte a ajouter a la liste des comptes
+	 */
+	public static void addToListeCompte(CompteBancaire c){
+		ListeCompte.put(c.getIdCompte(),c);
+	}
+
+	/**
+	 *
+	 * @param idPays
+	 *
+	 * @return
+	 * retourne le pays avec l'id en parametre
+	 */
 	public static Pays getPay(int idPays) {
 		return LesPays.get(idPays);
 	}
 
+	/**
+	 *
+	 * @param idCompte
+	 * @param idBanque
+	 * @return
+	 */
 	public static String aQuiEstCeCompte(int idCompte, int idBanque)
 	//retourne l'ID du possesseur du compte
 	{
@@ -266,7 +356,7 @@ public class Model {
 			}
 			else i--;
 		}
-
+		debutBanque = Personne.getID();
 		for (int j = 0; j < nb/2; j ++){
 			int random = (int) (Math.random() * ( Personne.getID() - 0 ));
 			if (ListeSociete.containsKey(random))
@@ -278,6 +368,7 @@ public class Model {
 			}
 			else j--;
 		}
+		finBanque = Personne.getID() - 1;
 	}
 	public static void AjouterComptes(){
 		int codeBanque = 0;
@@ -312,34 +403,38 @@ public class Model {
 		return null;
 	}
 	public static String denoncer(int idPays, int idPersonne, int idBanque, int idCompte, int idJouer){
-		Model.setJoueurCourant(Model.getJoueurCourant()+1);
-		if (!(LesPays.containsKey(idPays) || LesContribuable.containsKey(idPersonne) || ListeBanque.containsKey(idBanque) || ListeCompte.containsKey(idCompte))){
+	try {
+		Model.setJoueurCourant(Model.getJoueurCourant() + 1);
+		if (!(LesPays.containsKey(idPays) || LesContribuable.containsKey(idPersonne) || ListeBanque.containsKey(idBanque) || ListeCompte.containsKey(idCompte))) {
 			return "Un des champs au moins est erroné";
 		}
-		if (! ListeCompteFrauduleux.contains(ListeCompte.get(idCompte))){
+		if (!ListeCompteFrauduleux.contains(ListeCompte.get(idCompte))) {
 			return "ce compte n'est pas frauduleux ou a déjà été dénoncé";
 		}
-		System.out.println(ListeBanque.get(idBanque).getPays().getIdPays());
-		if(ListeBanque.get(idBanque).getPays().getIdPays() == idPays){
-			System.out.println(ListeCompte.get(idCompte).getIdPersonne());
-			if(LesPays.get(idPays).paysContientPersonne(ListeCompte.get(idCompte).getIdPersonne())){
-				HistoriqueDenonciation.add("Dans le pays : "+idPays+", le contribualble : "+idPersonne + ", numro de compte : "+idCompte);
-				ListeCompteFrauduleux.remove(ListeCompte.get(idCompte));
-				if (! ListeCompteFrauduleuxParEnqueteur.containsKey(idJouer)){
-					ListeCompteFrauduleuxParEnqueteur.put(idJouer,new ArrayList<CompteBancaire>());
+		if (ListeBanque.containsKey(idBanque)) {
+			if (ListeBanque.get(idBanque).getPays().getIdPays() == idPays) {
+				System.out.println(ListeCompte.get(idCompte).getIdPersonne());
+				if (LesPays.get(idPays).paysContientPersonne(ListeCompte.get(idCompte).getIdPersonne())) {
+					HistoriqueDenonciation.add("Dans le pays : " + idPays + ", le contribualble : " + idPersonne + ", numro de compte : " + idCompte);
+					ListeCompteFrauduleux.remove(ListeCompte.get(idCompte));
+					if (!ListeCompteFrauduleuxParEnqueteur.containsKey(idJouer)) {
+						ListeCompteFrauduleuxParEnqueteur.put(idJouer, new ArrayList<CompteBancaire>());
+					}
+					ListeCompteFrauduleuxParEnqueteur.get(idJouer).add(ListeCompte.get(idCompte));
+					if (Model.ListeCompteFrauduleux.size() == 0) {
+						return " partie terminé !!";
+					}
 
+					return "Denonciation effectué !!";
 				}
-				ListeCompteFrauduleuxParEnqueteur.get(idJouer).add(ListeCompte.get(idCompte));
-				if (Model.ListeCompteFrauduleux.size() == 0){
-                    return " partie terminé !!";
-                }
-
-				return "Denonciation effectué !!";
+				return "debug";
 			}
-			return "debug";
 		}
-
 		return "Ce compte n'appartient pas a cette personne ou n'est pas dans cette banque";
+	} catch (Exception e){
+		System.out.println("bug");
+		return "Un des champs au moins est erroné";
+	}
 	}
 	public static void creerComptefrauduleux(){
 		for (int i = 0; i < ListeCompte.size()/2  ; i++){
@@ -348,7 +443,7 @@ public class Model {
 		}
 	}
 	public static void faireJouerRobot(int id){
-        denoncer((int) (Math.random() * ( LesPays.size() -1 - 0 )), (int) (Math.random() * ( (nbJoueur - 1) - 0 )), (int) (Math.random() * ((nbJoueur + nbSociete + ((int) (nbSociete/4)) - 1) - (nbJoueur + nbSociete - 1))), (int) (Math.random() * ( ListeCompte.size()-1 - 0 )), id);
+        denoncer((int) (Math.random() * ( LesPays.size() -1 - 0 )), (int) (Math.random() * ( (nbJoueur - 1) - 0 )), debutBanque + (int) (Math.random() * (finBanque - debutBanque)), (int) (Math.random() * ( ListeCompte.size()-1 - 0 )), id);
     }
 	/*public static void main (String... args){
 		Model m = new Model();

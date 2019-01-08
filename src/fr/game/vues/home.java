@@ -10,12 +10,10 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Map;
 
 public class home extends Application {
@@ -475,7 +473,7 @@ public class home extends Application {
                         grid4.setStyle(styleGreen);
                         AlertBox.display("Bienvenue", "Bienvenue chers enquêteurs.\nQue le meilleur gagne ! ");
 
-                        Application a = new ListView();
+                        Application a = new Plateau();
                         try {
                             a.start(new Stage());
                         } catch (Exception e1) {

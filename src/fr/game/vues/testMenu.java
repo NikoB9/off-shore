@@ -29,7 +29,7 @@ public class testMenu extends Application {
         button3 = new Button("Home !");
         button4 = new Button("Registre");
         Application a = new Denonciation();
-        Application b = new ListView();
+        Application b = new Plateau();
         Application c = new home();
         Application d = new Registre();
 

@@ -13,7 +13,7 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-public class ListView extends Application {
+public class Plateau extends Application {
 
     Stage window;
     Scene scene;
@@ -42,7 +42,7 @@ public class ListView extends Application {
 
 
 
-        //ListView
+        //Plateau
         listView = new javafx.scene.control.ListView<>();
         //GetItems return the ObservableList object which you can add items to
         listView.getItems().addAll("A qui est ce compte ?", "Quelles Societes cette persoone a", "Qui possede cette societe");

@@ -1,9 +1,11 @@
 package fr.game.vues;
 
+import fr.game.model.Model;
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
@@ -17,7 +19,10 @@ public class Plateau extends Application {
 
 
         window = primaryStage;
-        window.setTitle("Test");
+        window.setTitle("Plateau");
+
+        Label joueur = new Label();
+        joueur.setText(Model.getListeJoueur().get(Model.getJoueurCourant()).getPseudo()+" : A vous de jouez\n\n\n");
 
         button = new Button("Denoncer !");
         button2 = new Button("Chercher !");
@@ -56,7 +61,7 @@ public class Plateau extends Application {
         VBox layout = new VBox(10);
         layout.setPadding(new Insets(20,20,20,20));
         //layout.getChildren().addAll(listView,button,newValue,oldValue);
-        layout.getChildren().addAll(button, button2,button4);
+        layout.getChildren().addAll(joueur, button, button2,button4);
 
         scene = new Scene(layout, 400, 500);
 

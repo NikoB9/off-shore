@@ -449,7 +449,13 @@ public class home extends Application {
                     user4valid = true;
                     grid4.setStyle(styleGreen);
                     AlertBox.display("Bienvenue", "Bienvenue chers enquêteurs.\nQue le meilleur gagne ! ");
-                    new ListView();
+
+                    Application a = new ListView();
+                    try {
+                        a.start(new Stage());
+                    } catch (Exception e1) {
+                        e1.printStackTrace();
+                    }
                 }
                 else {
                     user4valid = false;

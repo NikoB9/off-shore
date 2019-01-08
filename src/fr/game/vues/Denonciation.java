@@ -33,7 +33,7 @@ public class Denonciation extends Application {
     public void start(Stage primaryStage) throws Exception {
 
         window = primaryStage;
-        window.setTitle("Formulaire de denonciation");
+        window.setTitle(Model.getListeJoueur().get(Model.getJoueurCourant()).getPseudo()+" : A vous de jouez");
         button = new Button("Denoncer !");
 
 
@@ -72,8 +72,8 @@ public class Denonciation extends Application {
 
     //To get the value of the selected item
     private void getchoices() {
-        reponse.setText (Model.denoncer(Integer.parseInt(IDPays.getText()),Integer.parseInt(IDPersonne.getText()),Integer.parseInt(IDBanque.getText()),Integer.parseInt(IDCompte.getText())));
-
+        reponse.setText (Model.denoncer(Integer.parseInt(IDPays.getText()),Integer.parseInt(IDPersonne.getText()),Integer.parseInt(IDBanque.getText()),Integer.parseInt(IDCompte.getText()), Model.getJoueurCourant()));
+        button.setDisable(true);
     }
 
 

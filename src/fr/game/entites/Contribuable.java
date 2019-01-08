@@ -18,7 +18,7 @@ public class Contribuable extends Personne {
 
 	@Override
 	public String toString() {
-		return this.getIdPersonne()+" prenom : " + prenom +  " , nom : " +this.nom;
+		return this.getIdPersonne()+" prenom : " + prenom +  " , nom : " +this.nom + "pays : " + this.pays.getNom();
 	}
 
 	

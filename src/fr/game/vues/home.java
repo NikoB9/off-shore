@@ -137,10 +137,6 @@ public class home extends Application {
                          bot = true;
                      }
 
-
-                     Model.addToListeJoueur(new Enqeteur("","", Model.getPay(Model.getIdPaysByname(pays1.getValue().trim())), bot, name1Input.getText().trim()));
-                     paysUsed.add(pays1.getValue().trim());
-
                      //System.out.println(choixPays);
                      paysUsed.add(choixPays);
 
@@ -474,6 +470,7 @@ public class home extends Application {
                         AlertBox.display("Bienvenue", "Bienvenue chers enquêteurs.\nQue le meilleur gagne ! ");
 
                         Application a = new Plateau();
+
                         try {
                             a.start(new Stage());
                         } catch (Exception e1) {

@@ -1,5 +1,7 @@
 package fr.game.entites;
 
+import fr.game.model.Model;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -20,7 +22,7 @@ public class CompteBancaire {
 	}
 	@Override
 	public String toString() {
-		return "idCompte=" + idCompte + ", solde=" + solde ;
+		return "idCompte=" + idCompte + ", solde=" + solde +" ,pays : "+ Model.getListeBanque().get(codeBanque).getPays().getNom();
 	}
 	public int getIdCompte() {
 		return idCompte;

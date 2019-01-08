@@ -1,15 +1,14 @@
 package fr.game.model;
 
 import fr.game.entites.*;
-import fr.game.vues.Denonciation;
-import fr.game.vues.testMenu;
-import javafx.application.Application;
-import javafx.stage.Stage;
 ;
 
 import java.util.*;
 
 public class Model {
+    private static final int nbJoueur= 1;
+    private static final int nbSociete= 4;
+    private static int JoueurCourant = 0;
 	private static String[] nom = {"Martin","Bernard","Thomas","Petit","Rober","Richard","Durand","Dubois","Moreau","Laurent","Simon","Michel","Lefebvre","Leroy","Roux","David","Bertrand","Morel","Fournier","Girad"};
 	private static String[] prenom = {"Gabriel","Jules","Lucas","Louis","Adam","Hugo","Léo","Raphaël","Ethan","Nathan","Louise","Emma","Jade","Chloé","Manon","Alice","Lina","Léa","Lola","Camille"};
 	private static String[] nomSociete = {"ehdsdf","xcvnf"};
@@ -44,17 +43,25 @@ public class Model {
 		this.LesPays.put(1,new Pays("Portugal"));
 		this.LesPays.put(2,new Pays("Grande Bretagne"));
 		this.LesPays.put(3,new Pays("Espagne"));
-		this.LesPays.put(4,new Pays("Italie"));
+		/*this.LesPays.put(4,new Pays("Italie"));
 		this.LesPays.put(5,new Pays("Laos"));
 		this.LesPays.put(6,new Pays("Japon"));
 		this.LesPays.put(7,new Pays("Mexique"));
-		this.LesPays.put(8,new Pays("Suisse"));
+		this.LesPays.put(8,new Pays("Suisse"));*/
         peupler();
 	}
 
-	public static void peupler(){
-		genererContribuables(10);
-		genererSocietes(40);
+    public static int getJoueurCourant() {
+        return JoueurCourant;
+    }
+
+    public static void setJoueurCourant(int joueurCourant) {
+        JoueurCourant = joueurCourant;
+    }
+
+    public static void peupler(){
+		genererContribuables(nbJoueur);
+		genererSocietes(4);
 		AjouterComptes();
 		creerComptefrauduleux();
 	}
@@ -198,10 +205,16 @@ public class Model {
 	public static String QuiPossedeCetteSociete(int idSociete)
 	// retourne l'ID du possesseur
 	{
-		String retour ="Cettesociete n'existe pas";
+		String retour ="Cette societe n'existe pas";
 		if (ListeSociete.containsKey(idSociete)){
 			HistoriqueQuestion.add("Qui Possede Cette Societe : "+idSociete);
-			retour ="ID : " +LesContribuable.get(ListeSociete.get(idSociete).getPossesseur()).toString() ;
+			if (LesContribuable.containsKey(ListeSociete.get(idSociete).getPossesseur()))
+            {
+                retour =LesContribuable.get(ListeSociete.get(idSociete).getPossesseur()).toString() ;
+            }
+			else if  (ListeSociete.containsKey(ListeSociete.get(idSociete).getPossesseur())){
+                retour =ListeSociete.get(ListeSociete.get(idSociete).getPossesseur()).toString() ;
+            }
 		}
 
 		return retour;
@@ -295,7 +308,7 @@ public class Model {
 		}
 		return null;
 	}
-	public static String denoncer(int idPays, int idPersonne, int idBanque, int idCompte){
+	public static String denoncer(int idPays, int idPersonne, int idBanque, int idCompte, int idJouer){
 		if (!(LesPays.containsKey(idPays) || LesContribuable.containsKey(idPersonne) || ListeBanque.containsKey(idBanque) || ListeCompte.containsKey(idCompte))){
 			return "Un des champs au moins est erroné";
 		}
@@ -307,6 +320,15 @@ public class Model {
 			if(LesPays.get(idPays).paysContientPersonne(ListeCompte.get(idCompte).getIdPersonne())){
 				HistoriqueDenonciation.add("Dans le pays : "+idPays+", le contribualble : "+idPersonne + ", numro de compte : "+idCompte);
 				ListeCompteFrauduleux.remove(ListeCompte.get(idCompte));
+				if (! ListeCompteFrauduleuxParEnqueteur.containsKey(idJouer)){
+					ListeCompteFrauduleuxParEnqueteur.put(idJouer,new ArrayList<CompteBancaire>());
+
+				}
+				ListeCompteFrauduleuxParEnqueteur.get(idJouer).add(ListeCompte.get(idCompte));
+				if (Model.ListeCompteFrauduleux.size() == 0){
+                    return " partie terminé !!";
+                }
+				Model.setJoueurCourant(Model.getJoueurCourant()+1);
 				return "Denonciation effectué !!";
 			}
 			return "debug";
@@ -320,6 +342,9 @@ public class Model {
 			addToListeCompteFrauduleux(ListeCompte.get(i));
 		}
 	}
+	public static void faireJouerRobot(int id){
+        denoncer((int) (Math.random() * ( LesPays.size() -1 - 0 )), (int) (Math.random() * ( (nbJoueur - 1) - 0 )), (int) (Math.random() * ((nbJoueur + nbSociete + ((int) (nbSociete/4)) - 1) - (nbJoueur + nbSociete - 1))), (int) (Math.random() * ( ListeCompte.size()-1 - 0 )), id);
+    }
 	/*public static void main (String... args){
 		Model m = new Model();
 		for (Map.Entry<Integer, Pays> entry : Model.getLesPays().entrySet()) {

@@ -16,7 +16,7 @@ public class Societe extends Personne {
 	@Override
 	public String toString() {
 		return  "id de la societe : " + idPersonne +
-				", nom de la Societe : " + nom;
+				", nom de la Societe : " + nom +" ,pays : "+ this.pays.getNom();
 	}
 
 	@Override

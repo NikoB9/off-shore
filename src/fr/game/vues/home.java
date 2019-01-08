@@ -121,36 +121,44 @@ public class home extends Application {
         btnUser2.setOnAction(e -> {
 
 
-             String choixPays = pays1.getSelectionModel().selectedItemProperty().getValue().trim();
+             try {
+                 String choixPays = pays1.getSelectionModel().selectedItemProperty().getValue().trim();
 
-            //System.out.println(choixPays);
-
-
-            if(name1Input.getText().trim().equals("") || choixPays == ""){
-                user1valid = false;
-                grid.setStyle(styleRed);
-                AlertBox.display("Attention", "Veuillez remplir les champs");
-            }
-            else{
-
-                boolean bot = false;
-                if (BOT1.getValue() == "Robot"){
-                    bot = true;
-                }
+                 //System.out.println(choixPays);
 
 
-                Model.addToListeJoueur(new Enqeteur("","", Model.getPay(Model.getIdPaysByname(pays1.getValue().trim())), bot, name1Input.getText().trim()));
-                paysUsed.add(pays1.getValue().trim());
+                 if(name1Input.getText().trim().equals("") || choixPays == ""){
+                     user1valid = false;
+                     grid.setStyle(styleRed);
+                     AlertBox.display("Attention", "Veuillez remplir les champs");
+                 }
+                 else{
 
-                //System.out.println(choixPays);
-                paysUsed.add(choixPays);
+                     boolean bot = false;
+                     if (BOT1.getValue() == "Robot"){
+                         bot = true;
+                     }
 
-                Model.addToListeJoueur(new Enqeteur("","", Model.getPay(Model.getIdPaysByname(choixPays)), bot, name1Input.getText().trim()));
-                user1valid = true;
-                window.setTitle("Home : Utilisateur 2");
-                grid.setStyle(styleGreen);
-                window.setScene(scene2);
-            }
+
+                     Model.addToListeJoueur(new Enqeteur("","", Model.getPay(Model.getIdPaysByname(pays1.getValue().trim())), bot, name1Input.getText().trim()));
+                     paysUsed.add(pays1.getValue().trim());
+
+                     //System.out.println(choixPays);
+                     paysUsed.add(choixPays);
+
+                     Model.addToListeJoueur(new Enqeteur("","", Model.getPay(Model.getIdPaysByname(choixPays)), bot, name1Input.getText().trim()));
+                     user1valid = true;
+                     window.setTitle("Home : Utilisateur 2");
+                     grid.setStyle(styleGreen);
+                     window.setScene(scene2);
+                 }
+             }catch (Exception ex){
+                 user1valid = false;
+                 grid.setStyle(styleRed);
+                 AlertBox.display("Attention", "Veuillez choisir un Pays");
+             }
+
+
 
 
         });
@@ -217,38 +225,46 @@ public class home extends Application {
 
         btnUser3.setOnAction(e -> {
 
-            if(name2Input.getText().trim().equals("") || pays2.getValue().trim().equals("")){
-                user2valid = false;
-                grid2.setStyle(styleRed);
-                AlertBox.display("Attention", "Veuillez remplir les champs");
-            }
-            else{
-
-
-                if (!paysUsed.contains(pays2.getValue().trim())){
-                    boolean bot = false;
-                    if (BOT2.getValue() == "Robot"){
-                        bot = true;
-                    }
-
-
-                    Model.addToListeJoueur(new Enqeteur("","", Model.getPay(Model.getIdPaysByname(pays2.getValue().trim())), bot, name2Input.getText().trim()));
-                    paysUsed.add(pays2.getValue().trim());
-
-
-                    user2valid = true;
-                    grid2.setStyle(styleGreen);
-                    window.setTitle("Home : Utilisateur 3");
-                    window.setScene(scene3);
-                }
-
-                else {
+            try {
+                if(name2Input.getText().trim().equals("") || pays2.getValue().trim().equals("")){
                     user2valid = false;
                     grid2.setStyle(styleRed);
-                    AlertBox.display("Erreur", "Un autre enquêteur se charge déjà de ce pays.");
+                    AlertBox.display("Attention", "Veuillez remplir les champs");
                 }
+                else{
 
+
+                    if (!paysUsed.contains(pays2.getValue().trim())){
+                        boolean bot = false;
+                        if (BOT2.getValue() == "Robot"){
+                            bot = true;
+                        }
+
+
+                        Model.addToListeJoueur(new Enqeteur("","", Model.getPay(Model.getIdPaysByname(pays2.getValue().trim())), bot, name2Input.getText().trim()));
+                        paysUsed.add(pays2.getValue().trim());
+
+
+                        user2valid = true;
+                        grid2.setStyle(styleGreen);
+                        window.setTitle("Home : Utilisateur 3");
+                        window.setScene(scene3);
+                    }
+
+                    else {
+                        user2valid = false;
+                        grid2.setStyle(styleRed);
+                        AlertBox.display("Erreur", "Un autre enquêteur se charge déjà de ce pays.");
+                    }
+
+                }
             }
+            catch (Exception ex){
+                user2valid = false;
+                grid2.setStyle(styleRed);
+                AlertBox.display("Attention", "Veuillez choisir un Pays");
+            }
+
 
         });
 
@@ -323,37 +339,45 @@ public class home extends Application {
 
         btnUser4.setOnAction(e -> {
 
-            if(name3Input.getText().trim().equals("") || pays3.getValue().trim().equals("")){
-                user3valid = false;
-                grid3.setStyle(styleRed);
-                AlertBox.display("Attention", "Veuillez remplir les champs");
-            }
-            else{
-
-                if (!paysUsed.contains(pays3.getValue().trim())){
-
-                    boolean bot = false;
-                    if (BOT3.getValue() == "Robot"){
-                        bot = true;
-                    }
-
-                    //System.out.println(choixPays);
-
-                    Model.addToListeJoueur(new Enqeteur("","", Model.getPay(Model.getIdPaysByname(pays3.getValue().trim())), bot, name3Input.getText().trim()));
-                    paysUsed.add(pays3.getValue().trim());
-
-                    user3valid = true;
-                    grid3.setStyle(styleGreen);
-                    window.setTitle("Home : Utilisateur 4");
-                    window.setScene(scene4);
-                }
-                else {
+            try {
+                if(name3Input.getText().trim().equals("") || pays3.getValue().trim().equals("")){
                     user3valid = false;
                     grid3.setStyle(styleRed);
-                    AlertBox.display("Erreur", "Un autre enquêteur se charge déjà de ce pays.");
+                    AlertBox.display("Attention", "Veuillez remplir les champs");
                 }
+                else{
 
+                    if (!paysUsed.contains(pays3.getValue().trim())){
+
+                        boolean bot = false;
+                        if (BOT3.getValue() == "Robot"){
+                            bot = true;
+                        }
+
+                        //System.out.println(choixPays);
+
+                        Model.addToListeJoueur(new Enqeteur("","", Model.getPay(Model.getIdPaysByname(pays3.getValue().trim())), bot, name3Input.getText().trim()));
+                        paysUsed.add(pays3.getValue().trim());
+
+                        user3valid = true;
+                        grid3.setStyle(styleGreen);
+                        window.setTitle("Home : Utilisateur 4");
+                        window.setScene(scene4);
+                    }
+                    else {
+                        user3valid = false;
+                        grid3.setStyle(styleRed);
+                        AlertBox.display("Erreur", "Un autre enquêteur se charge déjà de ce pays.");
+                    }
+
+                }
             }
+            catch (Exception ex){
+                user3valid = false;
+                grid3.setStyle(styleRed);
+                AlertBox.display("Attention", "Veuillez choisir un Pays");
+            }
+
 
         });
 
@@ -426,44 +450,51 @@ public class home extends Application {
 
         btnJouer.setOnAction(e -> {
 
-            if(name4Input.getText().trim().equals("") || pays4.getValue().trim().equals("")){
-                user4valid = false;
-                grid4.setStyle(styleRed);
-                AlertBox.display("Attention", "Veuillez remplir les champs");
-            }
-            else{
-                
-                if (!paysUsed.contains(pays4.getValue().trim())){
-
-                    boolean bot = false;
-                    if (BOT4.getValue() == "Robot"){
-                        bot = true;
-                    }
-
-                    //System.out.println(choixPays);
-                    paysUsed.add(pays4.getValue().trim());
-
-
-                    Model.addToListeJoueur(new Enqeteur("","", Model.getPay(Model.getIdPaysByname(pays4.getValue().trim())), bot, name4Input.getText().trim()));
-
-                    user4valid = true;
-                    grid4.setStyle(styleGreen);
-                    AlertBox.display("Bienvenue", "Bienvenue chers enquêteurs.\nQue le meilleur gagne ! ");
-
-                    Application a = new ListView();
-                    try {
-                        a.start(new Stage());
-                    } catch (Exception e1) {
-                        e1.printStackTrace();
-                    }
-                }
-                else {
+            try {
+                if(name4Input.getText().trim().equals("") || pays4.getValue().trim().equals("")){
                     user4valid = false;
                     grid4.setStyle(styleRed);
-                    AlertBox.display("Erreur", "Un autre enquêteur se charge déjà de ce pays.");
+                    AlertBox.display("Attention", "Veuillez remplir les champs");
                 }
-                
+                else{
 
+                    if (!paysUsed.contains(pays4.getValue().trim())){
+
+                        boolean bot = false;
+                        if (BOT4.getValue() == "Robot"){
+                            bot = true;
+                        }
+
+                        //System.out.println(choixPays);
+                        paysUsed.add(pays4.getValue().trim());
+
+
+                        Model.addToListeJoueur(new Enqeteur("","", Model.getPay(Model.getIdPaysByname(pays4.getValue().trim())), bot, name4Input.getText().trim()));
+
+                        user4valid = true;
+                        grid4.setStyle(styleGreen);
+                        AlertBox.display("Bienvenue", "Bienvenue chers enquêteurs.\nQue le meilleur gagne ! ");
+
+                        Application a = new ListView();
+                        try {
+                            a.start(new Stage());
+                        } catch (Exception e1) {
+                            e1.printStackTrace();
+                        }
+                    }
+                    else {
+                        user4valid = false;
+                        grid4.setStyle(styleRed);
+                        AlertBox.display("Erreur", "Un autre enquêteur se charge déjà de ce pays.");
+                    }
+
+
+                }
+            }
+            catch (Exception ex){
+                user4valid = false;
+                grid4.setStyle(styleRed);
+                AlertBox.display("Attention", "Veuillez choisir un Pays");
             }
 
 

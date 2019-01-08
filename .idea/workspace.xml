@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1af07926-5310-4d52-bbdc-9b7d3557e1b2" name="Default Changelist" comment="">
+    <list default="true" id="1af07926-5310-4d52-bbdc-9b7d3557e1b2" name="Default Changelist" comment="methodes add pour tout le model">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fr/game/entites/CompteBancaire.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/game/entites/CompteBancaire.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fr/game/entites/Contribuable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/game/entites/Contribuable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fr/game/entites/Pays.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/game/entites/Pays.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fr/game/entites/Societe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/game/entites/Societe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fr/game/model/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/game/model/Model.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fr/game/vues/Registre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/game/vues/Registre.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fr/game/vues/testMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/game/vues/testMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fr/game/vues/home.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/game/vues/home.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,61 +17,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/fr/game/model/Model.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2971">
-              <caret line="234" column="74" selection-start-line="234" selection-start-column="61" selection-end-line="234" selection-end-column="74" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#4556#4557#0" expanded="true" />
-                <element signature="e#4612#4613#0" expanded="true" />
-                <element signature="e#4784#4785#0" expanded="true" />
-                <element signature="e#4831#4832#0" expanded="true" />
-                <element signature="e#4882#4883#0" expanded="true" />
-                <element signature="e#4907#4908#0" expanded="true" />
-                <element signature="e#4961#4962#0" expanded="true" />
-                <element signature="e#4989#4990#0" expanded="true" />
-                <element signature="e#5172#5173#0" expanded="true" />
-                <element signature="e#5213#5214#0" expanded="true" />
-                <element signature="e#5282#5283#0" expanded="true" />
-                <element signature="e#5320#5321#0" expanded="true" />
-                <element signature="e#5366#5367#0" expanded="true" />
-                <element signature="e#5395#5396#0" expanded="true" />
-                <element signature="e#5437#5438#0" expanded="true" />
-                <element signature="e#5470#5471#0" expanded="true" />
-                <element signature="e#5884#6539#0" />
-                <element signature="e#6542#6917#0" />
-                <element signature="e#6920#7336#0" />
-                <element signature="e#9504#9871#1" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fr/game/vues/testMenu.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+            <state relative-caret-position="2397">
+              <caret line="190" selection-start-line="190" selection-end-line="190" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/fr/game/vues/Registre.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fr/game/entites/Banque.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="22" column="30" selection-start-line="22" selection-start-column="15" selection-end-line="22" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -85,48 +29,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/fr/game/entites/Societe.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="33" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fr/game/entites/Personne.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="19" column="31" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
-              <folding>
-                <element signature="e#394#395#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fr/game/entites/Contribuable.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="20" column="82" selection-start-line="20" selection-start-column="82" selection-end-line="20" selection-end-column="82" />
-              <folding>
-                <element signature="e#364#365#0" expanded="true" />
-                <element signature="e#449#450#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fr/game/entites/CompteBancaire.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="22" column="59" lean-forward="true" selection-start-line="22" selection-start-column="59" selection-end-line="22" selection-end-column="59" />
-              <folding>
-                <element signature="e#760#761#0" expanded="true" />
-                <element signature="e#797#798#0" expanded="true" />
-                <element signature="e#832#833#0" expanded="true" />
-                <element signature="e#857#858#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="272">
+              <caret line="18" column="39" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -134,8 +38,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/fr/game/entites/Pays.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="377">
-              <caret line="63" column="37" selection-start-line="63" selection-start-column="37" selection-end-line="63" selection-end-column="37" />
+            <state relative-caret-position="238">
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
               <folding>
                 <element signature="e#426#427#0" expanded="true" />
                 <element signature="e#442#443#0" expanded="true" />
@@ -147,12 +51,57 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fr/game/vues/Denonciation.java">
+        <entry file="file://$PROJECT_DIR$/src/fr/game/entites/Banque.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1088">
-              <caret line="74" column="30" selection-start-line="74" selection-start-column="25" selection-end-line="74" selection-end-column="30" />
+            <state>
+              <caret column="2" selection-start-column="2" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/fr/game/vues/ListView.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1564">
+              <caret line="103" selection-start-line="103" selection-end-line="103" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/fr/game/vues/home.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="123">
+              <caret line="465" column="81" selection-start-line="465" selection-start-column="81" selection-end-line="465" selection-end-column="81" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#5510#5518#0" expanded="true" />
+                <element signature="e#6253#6261#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/fr/game/entites/Contribuable.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="20" column="36" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
+              <folding>
+                <element signature="e#364#365#0" expanded="true" />
+                <element signature="e#445#446#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/fr/game/entites/Personne.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="19" column="31" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
+              <folding>
+                <element signature="e#394#395#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -181,25 +130,14 @@
       <find>getPay</find>
       <find>name1Input</find>
       <find>possede</find>
-      <find>denoncer</find>
-      <find>AjouterComptes</find>
-      <find>genererSocietes</find>
-      <find>AjouterSocieteBanquePersonne</find>
-      <find>model</find>
-      <find>cette banque n</find>
-      <find>Model</find>
-      <find>ListeCompteFrauduleuxParEnqueteur</find>
-      <find>peuple</find>
-      <find>Math.random()</find>
-      <find>l_compteSuspects</find>
-      <find>l_compteFrauduleuxParEnqueteur</find>
-      <find>l_banques</find>
-      <find>l_societes</find>
-      <find>l_comptes</find>
-      <find>l_joeurs</find>
-      <find>l_contribuables</find>
-      <find>l_pays</find>
+      <find>.setValue(&quot;&quot;);</find>
+      <find>javafx.scene.control.ComboBox&lt;&gt;</find>
+      <find>getEditor().getText()</find>
     </findStrings>
+    <replaceStrings>
+      <replace>javafx.scene.control.ComboBox&lt;String&gt;</replace>
+      <replace>getValue()</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="UPDATE_TYPE" value="REBASE" />
@@ -216,25 +154,29 @@
         <option value="$PROJECT_DIR$/src/Model.java" />
         <option value="$PROJECT_DIR$/src/Pays.java" />
         <option value="$PROJECT_DIR$/src/fr/game/entites/Enqeteur.java" />
+        <option value="$PROJECT_DIR$/src/fr/game/entites/CompteBancaire.java" />
         <option value="$PROJECT_DIR$/src/fr/game/entites/Personne.java" />
         <option value="$PROJECT_DIR$/src/fr/game/entites/Banque.java" />
-        <option value="$PROJECT_DIR$/src/fr/game/vues/Denonciation.java" />
-        <option value="$PROJECT_DIR$/src/fr/game/vues/ListView.java" />
-        <option value="$PROJECT_DIR$/src/fr/game/vues/home.java" />
-        <option value="$PROJECT_DIR$/src/fr/game/model/Model.java" />
-        <option value="$PROJECT_DIR$/src/fr/game/vues/testMenu.java" />
-        <option value="$PROJECT_DIR$/src/fr/game/entites/Contribuable.java" />
-        <option value="$PROJECT_DIR$/src/fr/game/entites/Pays.java" />
         <option value="$PROJECT_DIR$/src/fr/game/entites/Societe.java" />
-        <option value="$PROJECT_DIR$/src/fr/game/entites/CompteBancaire.java" />
-        <option value="$PROJECT_DIR$/src/fr/game/vues/Registre.java" />
+        <option value="$PROJECT_DIR$/src/fr/game/entites/Pays.java" />
+        <option value="$PROJECT_DIR$/src/fr/game/entites/Contribuable.java" />
+        <option value="$PROJECT_DIR$/src/fr/game/vues/ListView.java" />
+        <option value="$PROJECT_DIR$/src/fr/game/model/Model.java" />
+        <option value="$PROJECT_DIR$/src/fr/game/vues/home.java" />
       </list>
     </option>
   </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
+  </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-10" />
-    <option name="width" value="2026" />
-    <option name="height" value="1932" />
+    <option name="x" value="-12" />
+    <option name="y" value="-12" />
+    <option name="width" value="2904" />
+    <option name="height" value="1644" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -242,48 +184,29 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="off-shore" type="b2602c69:ProjectViewProjectNode" />
-              <item name="off-shore" type="462c0819:PsiDirectoryNode" />
+              <item name="off-shore-master2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="off-shore-master2" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="off-shore" type="b2602c69:ProjectViewProjectNode" />
-              <item name="off-shore" type="462c0819:PsiDirectoryNode" />
+              <item name="off-shore-master2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="off-shore-master2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="off-shore" type="b2602c69:ProjectViewProjectNode" />
-              <item name="off-shore" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="game" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="off-shore" type="b2602c69:ProjectViewProjectNode" />
-              <item name="off-shore" type="462c0819:PsiDirectoryNode" />
+              <item name="off-shore-master2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="off-shore-master2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="game" type="462c0819:PsiDirectoryNode" />
-              <item name="entites" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="off-shore" type="b2602c69:ProjectViewProjectNode" />
-              <item name="off-shore" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="game" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="off-shore" type="b2602c69:ProjectViewProjectNode" />
-              <item name="off-shore" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="game" type="462c0819:PsiDirectoryNode" />
-              <item name="techniques" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="off-shore" type="b2602c69:ProjectViewProjectNode" />
-              <item name="off-shore" type="462c0819:PsiDirectoryNode" />
+              <item name="off-shore-master2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="off-shore-master2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="game" type="462c0819:PsiDirectoryNode" />
               <item name="vues" type="462c0819:PsiDirectoryNode" />
@@ -292,16 +215,11 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546931403039" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546965888292" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -319,9 +237,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.testMenu">
-    <configuration name="Denonciation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="fr.game.vues.Denonciation" />
+  <component name="RunManager" selected="Application.home">
+    <configuration name="ListView" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="fr.game.vues.ListView" />
       <module name="off-shore" />
       <extension name="coverage">
         <pattern>
@@ -333,12 +251,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ListView" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="fr.game.vues.ListView" />
+    <configuration name="Menus" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="fr.game.techniques.Menus" />
       <module name="off-shore" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="fr.game.vues.*" />
+          <option name="PATTERN" value="fr.game.techniques.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -359,8 +277,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Registre" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="fr.game.vues.Registre" />
+    <configuration name="TreeView" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="fr.game.vues.TreeView" />
       <module name="off-shore" />
       <extension name="coverage">
         <pattern>
@@ -372,8 +290,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="testMenu" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="fr.game.vues.testMenu" />
+    <configuration name="home" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="fr.game.vues.home" />
       <module name="off-shore" />
       <extension name="coverage">
         <pattern>
@@ -387,11 +305,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.testMenu" />
-        <item itemvalue="Application.Registre" />
-        <item itemvalue="Application.Model" />
-        <item itemvalue="Application.Denonciation" />
+        <item itemvalue="Application.home" />
         <item itemvalue="Application.ListView" />
+        <item itemvalue="Application.TreeView" />
+        <item itemvalue="Application.Model" />
+        <item itemvalue="Application.Menus" />
       </list>
     </recent_temporary>
   </component>
@@ -405,8 +323,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1546695160104</updated>
-      <workItem from="1546927768931" duration="117000" />
-      <workItem from="1546929595775" duration="1794000" />
     </task>
     <task id="LOCAL-00001" summary="C'est chiant">
       <created>1546710455017</created>
@@ -471,45 +387,17 @@
       <option name="project" value="LOCAL" />
       <updated>1546877186991</updated>
     </task>
-    <task id="LOCAL-00010" summary="ListView fonctionelle v1">
-      <created>1546886489667</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1546886489667</updated>
-    </task>
-    <task id="LOCAL-00011" summary="ListView fonctionelle v1">
-      <created>1546893583625</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1546893583625</updated>
-    </task>
-    <task id="LOCAL-00012" summary="ListView fonctionelle v1">
-      <created>1546898538950</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1546898538950</updated>
-    </task>
-    <task id="LOCAL-00013" summary="ListView fonctionelle v1">
-      <created>1546899659805</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1546899659805</updated>
-    </task>
-    <option name="localTasksCounter" value="14" />
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39664000" />
+    <option name="totallyTimeSpent" value="24266000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="-6" width="1513" height="973" extended-state="6" />
+    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24467354" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16923077" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -518,7 +406,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32977462" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3143535" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.18827708" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -527,17 +415,14 @@
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.25704467" side_tool="true" weight="0.32977462" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32977462" />
-      <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.37975708" />
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Maven" order="4" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Capture Analysis" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Database" order="8" />
+      <window_info anchor="right" id="Theme Preview" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Maven" order="7" weight="0.32955465" />
     </layout>
     <layout-to-restore>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23780069" />
@@ -549,7 +434,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32977462" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3143535" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32977462" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -575,8 +460,7 @@
     <MESSAGE value="C'est chiant" />
     <MESSAGE value="Compte frauduleux" />
     <MESSAGE value="methodes add pour tout le model" />
-    <MESSAGE value="ListView fonctionelle v1" />
-    <option name="LAST_COMMIT_MESSAGE" value="ListView fonctionelle v1" />
+    <option name="LAST_COMMIT_MESSAGE" value="methodes add pour tout le model" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/CompteBancaire.java" />
@@ -599,6 +483,30 @@
     <entry file="file://$PROJECT_DIR$/src/Personne.java" />
     <entry file="file://$PROJECT_DIR$/src/Model.java" />
     <entry file="file://$PROJECT_DIR$/src/Pays.java" />
+    <entry file="file://$PROJECT_DIR$/src/fr/game/techniques/AlertBox.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fr/game/techniques/Menus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fr/game/entites/CompteBancaire.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="32" column="53" selection-start-line="32" selection-start-column="53" selection-end-line="32" selection-end-column="53" />
+          <folding>
+            <element signature="e#797#798#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/util/function/BiConsumer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="211">
@@ -649,107 +557,57 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/fr/game/vues/TreeView.java" />
-    <entry file="file://$PROJECT_DIR$/src/fr/game/techniques/AlertBox.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fr/game/techniques/Menus.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fr/game/vues/ListView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="50" column="34" selection-start-line="50" selection-start-column="29" selection-end-line="50" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fr/game/vues/home.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1139">
-          <caret line="83" column="51" selection-start-line="83" selection-start-column="46" selection-end-line="83" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fr/game/vues/Denonciation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1088">
-          <caret line="74" column="30" selection-start-line="74" selection-start-column="25" selection-end-line="74" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fr/game/vues/testMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/fr/game/model/Model.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2971">
-          <caret line="234" column="74" selection-start-line="234" selection-start-column="61" selection-end-line="234" selection-end-column="74" />
+        <state relative-caret-position="2397">
+          <caret line="190" selection-start-line="190" selection-end-line="190" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4556#4557#0" expanded="true" />
-            <element signature="e#4612#4613#0" expanded="true" />
-            <element signature="e#4784#4785#0" expanded="true" />
-            <element signature="e#4831#4832#0" expanded="true" />
-            <element signature="e#4882#4883#0" expanded="true" />
-            <element signature="e#4907#4908#0" expanded="true" />
-            <element signature="e#4961#4962#0" expanded="true" />
-            <element signature="e#4989#4990#0" expanded="true" />
-            <element signature="e#5172#5173#0" expanded="true" />
-            <element signature="e#5213#5214#0" expanded="true" />
-            <element signature="e#5282#5283#0" expanded="true" />
-            <element signature="e#5320#5321#0" expanded="true" />
-            <element signature="e#5366#5367#0" expanded="true" />
-            <element signature="e#5395#5396#0" expanded="true" />
-            <element signature="e#5437#5438#0" expanded="true" />
-            <element signature="e#5470#5471#0" expanded="true" />
-            <element signature="e#5884#6539#0" />
-            <element signature="e#6542#6917#0" />
-            <element signature="e#6920#7336#0" />
-            <element signature="e#9504#9871#1" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/fr/game/entites/Contribuable.java">
+    <entry file="file://$PROJECT_DIR$/src/fr/game/entites/Societe.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="20" column="82" selection-start-line="20" selection-start-column="82" selection-end-line="20" selection-end-column="82" />
-          <folding>
-            <element signature="e#364#365#0" expanded="true" />
-            <element signature="e#449#450#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="272">
+          <caret line="18" column="39" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/fr/game/entites/Pays.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="63" column="37" selection-start-line="63" selection-start-column="37" selection-end-line="63" selection-end-column="37" />
+        <state relative-caret-position="238">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
           <folding>
             <element signature="e#426#427#0" expanded="true" />
             <element signature="e#442#443#0" expanded="true" />
             <element signature="e#469#470#0" expanded="true" />
             <element signature="e#489#490#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fr/game/entites/Banque.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="2" selection-start-column="2" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fr/game/vues/ListView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1564">
+          <caret line="103" selection-start-line="103" selection-end-line="103" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fr/game/entites/Contribuable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="20" column="36" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
+          <folding>
+            <element signature="e#364#365#0" expanded="true" />
+            <element signature="e#445#446#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -764,37 +622,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/fr/game/entites/Banque.java">
+    <entry file="file://$PROJECT_DIR$/src/fr/game/vues/home.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="22" column="30" selection-start-line="22" selection-start-column="15" selection-end-line="22" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fr/game/entites/Societe.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="33" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fr/game/entites/CompteBancaire.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="22" column="59" lean-forward="true" selection-start-line="22" selection-start-column="59" selection-end-line="22" selection-end-column="59" />
+        <state relative-caret-position="123">
+          <caret line="465" column="81" selection-start-line="465" selection-start-column="81" selection-end-line="465" selection-end-column="81" />
           <folding>
-            <element signature="e#760#761#0" expanded="true" />
-            <element signature="e#797#798#0" expanded="true" />
-            <element signature="e#832#833#0" expanded="true" />
-            <element signature="e#857#858#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#5510#5518#0" expanded="true" />
+            <element signature="e#6253#6261#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fr/game/vues/Registre.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
         </state>
       </provider>
     </entry>

@@ -45,6 +45,8 @@ public class home extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
 
+        new Model();
+
         grid.setStyle(style);
         grid2.setStyle(style);
         grid3.setStyle(style);
@@ -78,7 +80,7 @@ public class home extends Application {
         GridPane.setConstraints(pays1Field , 0, 1);
 
         //ComboBox
-        javafx.scene.control.ComboBox<String> pays1 = new javafx.scene.control.ComboBox<>();
+        javafx.scene.control.ComboBox<String> pays1 = new javafx.scene.control.ComboBox<String>();
 
         //GetItems return the ObservableList object which you can add items to
         for (Map.Entry<Integer, Pays> entry : Model.getLesPays().entrySet()) {
@@ -90,10 +92,10 @@ public class home extends Application {
 
 
         //Set a default value
-        pays1.setValue("");
+        //pays1.setValue("");
 
         //Add "TextField"
-        pays1.setEditable(true);
+        //pays1.setEditable(true);
 
         GridPane.setConstraints(pays1,1,1);
 
@@ -107,7 +109,7 @@ public class home extends Application {
         //radiobouton pour bot
         //ChoiceBox
         //javafx.scene.control.ChoiceBox<String> BOT1 = new javafx.scene.control.ChoiceBox<>();
-        javafx.scene.control.ComboBox<String> BOT1 = new javafx.scene.control.ComboBox<>();
+        javafx.scene.control.ComboBox<String> BOT1 = new javafx.scene.control.ComboBox<String>();
 
         //GetItems return the ObservableList object which you can add items to
         BOT1.getItems().addAll("Joueur", "Robot");
@@ -136,9 +138,13 @@ public class home extends Application {
                     bot = true;
                 }
 
-                System.out.println(choixPays);
 
+                Model.addToListeJoueur(new Enqeteur("","", Model.getPay(Model.getIdPaysByname(pays1.getValue().trim())), bot, name1Input.getText().trim()));
+                paysUsed.add(pays1.getValue().trim());
+
+                //System.out.println(choixPays);
                 paysUsed.add(choixPays);
+
                 Model.addToListeJoueur(new Enqeteur("","", Model.getPay(Model.getIdPaysByname(choixPays)), bot, name1Input.getText().trim()));
                 user1valid = true;
                 window.setTitle("Home : Utilisateur 2");
@@ -156,9 +162,7 @@ public class home extends Application {
 
 
         //UTILISATEUR/SCENE 2
-
-
-
+        System.out.println(Model.getListeJoueur());
 
 
 
@@ -179,7 +183,7 @@ public class home extends Application {
         GridPane.setConstraints(pays2Field , 0, 1);
 
         //ComboBox
-        javafx.scene.control.ComboBox<String> pays2 = new javafx.scene.control.ComboBox<>();
+        javafx.scene.control.ComboBox<String> pays2 = new javafx.scene.control.ComboBox<String>();
 
         //GetItems return the ObservableList object which you can add items to
        // pays2.getItems().addAll("France", "Californie", "Portugal", "Grande Bretagne", "Espagne");
@@ -189,14 +193,24 @@ public class home extends Application {
             pays2.getItems().add(pays.getNom());
         }
 
+        //pays2.setValue("");
         //Add "TextField"
-        pays2.setEditable(true);
+        //pays2.setEditable(true);
 
         GridPane.setConstraints(pays2,1,1);
 
 
         Button btnUser3 = new Button("Utilisateur 3");
         GridPane.setConstraints(btnUser3,1,3);
+
+        javafx.scene.control.ComboBox<String> BOT2 = new javafx.scene.control.ComboBox<String>();
+
+        //GetItems return the ObservableList object which you can add items to
+        BOT2.getItems().addAll("Joueur", "Robot");
+
+        //Set a default value
+        BOT2.setValue("Joueur");
+        GridPane.setConstraints(BOT2,0,3);
 
         /*Button user2 = new Button("User 2");
         GridPane.setConstraints(loginButton,3,0);*/
@@ -210,13 +224,24 @@ public class home extends Application {
             }
             else{
 
+
                 if (!paysUsed.contains(pays2.getValue().trim())){
+                    boolean bot = false;
+                    if (BOT2.getValue() == "Robot"){
+                        bot = true;
+                    }
+
+
+                    Model.addToListeJoueur(new Enqeteur("","", Model.getPay(Model.getIdPaysByname(pays2.getValue().trim())), bot, name2Input.getText().trim()));
                     paysUsed.add(pays2.getValue().trim());
+
+
                     user2valid = true;
                     grid2.setStyle(styleGreen);
                     window.setTitle("Home : Utilisateur 3");
                     window.setScene(scene3);
                 }
+
                 else {
                     user2valid = false;
                     grid2.setStyle(styleRed);
@@ -228,10 +253,10 @@ public class home extends Application {
         });
 
 
-        grid2.getChildren().addAll(name2Label, name2Input, pays2,pays2Field, btnUser3);
+        grid2.getChildren().addAll(name2Label, name2Input, pays2,pays2Field, BOT2, btnUser3);
         //layout1.getChildren().addAll(label1, button1);
 
-        scene2 = new Scene(grid2, 300,120);
+        scene2 = new Scene(grid2, 300,130);
 
 
 
@@ -265,7 +290,7 @@ public class home extends Application {
         GridPane.setConstraints(pays3Field , 0, 1);
 
         //ComboBox
-        javafx.scene.control.ComboBox<String> pays3 = new javafx.scene.control.ComboBox<>();
+        javafx.scene.control.ComboBox<String> pays3 = new javafx.scene.control.ComboBox<String>();
 
         //GetItems return the ObservableList object which you can add items to
         for (Map.Entry<Integer, Pays> entry : Model.getLesPays().entrySet()) {
@@ -275,13 +300,23 @@ public class home extends Application {
         }
 
         //Add "TextField"
-        pays3.setEditable(true);
+        /*pays3.setValue("");
+        pays3.setEditable(true);*/
 
         GridPane.setConstraints(pays3,1,1);
 
 
         Button btnUser4 = new Button("Utilisateur 4");
         GridPane.setConstraints(btnUser4,1,3);
+
+        javafx.scene.control.ComboBox<String> BOT3 = new javafx.scene.control.ComboBox<String>();
+
+        //GetItems return the ObservableList object which you can add items to
+        BOT3.getItems().addAll("Joueur", "Robot");
+
+        //Set a default value
+        BOT3.setValue("Joueur");
+        GridPane.setConstraints(BOT3,0,3);
 
         /*Button user2 = new Button("User 2");
         GridPane.setConstraints(loginButton,3,0);*/
@@ -296,7 +331,17 @@ public class home extends Application {
             else{
 
                 if (!paysUsed.contains(pays3.getValue().trim())){
+
+                    boolean bot = false;
+                    if (BOT3.getValue() == "Robot"){
+                        bot = true;
+                    }
+
+                    //System.out.println(choixPays);
+
+                    Model.addToListeJoueur(new Enqeteur("","", Model.getPay(Model.getIdPaysByname(pays3.getValue().trim())), bot, name3Input.getText().trim()));
                     paysUsed.add(pays3.getValue().trim());
+
                     user3valid = true;
                     grid3.setStyle(styleGreen);
                     window.setTitle("Home : Utilisateur 4");
@@ -312,10 +357,10 @@ public class home extends Application {
 
         });
 
-        grid3.getChildren().addAll(name3Label, name3Input, pays3,pays3Field, btnUser4);
+        grid3.getChildren().addAll(name3Label, name3Input, pays3,pays3Field, BOT3, btnUser4);
         //layout1.getChildren().addAll(label1, button1);
 
-        scene3 = new Scene(grid3, 300,120);
+        scene3 = new Scene(grid3, 300,130);
 
 
 
@@ -347,7 +392,7 @@ public class home extends Application {
         GridPane.setConstraints(pays4Field , 0, 1);
 
         //ComboBox
-        javafx.scene.control.ComboBox<String> pays4 = new javafx.scene.control.ComboBox<>();
+        javafx.scene.control.ComboBox<String> pays4 = new javafx.scene.control.ComboBox<String>();
 
         //GetItems return the ObservableList object which you can add items to
         for (Map.Entry<Integer, Pays> entry : Model.getLesPays().entrySet()) {
@@ -357,13 +402,24 @@ public class home extends Application {
         }
 
         //Add "TextField"
-        pays4.setEditable(true);
+        /*pays4.setEditable(true);
+        pays4.setValue("");*/
+
 
         GridPane.setConstraints(pays4,1,1);
 
 
         Button btnJouer = new Button("JOUER");
         GridPane.setConstraints(btnJouer,1,3);
+
+        javafx.scene.control.ComboBox<String> BOT4 = new javafx.scene.control.ComboBox<String>();
+
+        //GetItems return the ObservableList object which you can add items to
+        BOT4.getItems().addAll("Joueur", "Robot");
+
+        //Set a default value
+        BOT4.setValue("Joueur");
+        GridPane.setConstraints(BOT4,0,3);
 
         /*Button user2 = new Button("User 2");
         GridPane.setConstraints(loginButton,3,0);*/
@@ -377,11 +433,23 @@ public class home extends Application {
             }
             else{
                 
-                if (!paysUsed.contains(pays4.getValue().trim()) && user1valid && user2valid && user3valid && user4valid){
+                if (!paysUsed.contains(pays4.getValue().trim())){
+
+                    boolean bot = false;
+                    if (BOT4.getValue() == "Robot"){
+                        bot = true;
+                    }
+
+                    //System.out.println(choixPays);
                     paysUsed.add(pays4.getValue().trim());
+
+
+                    Model.addToListeJoueur(new Enqeteur("","", Model.getPay(Model.getIdPaysByname(pays4.getValue().trim())), bot, name4Input.getText().trim()));
+
                     user4valid = true;
                     grid4.setStyle(styleGreen);
                     AlertBox.display("Bienvenue", "Bienvenue chers enquêteurs.\nQue le meilleur gagne ! ");
+                    new ListView();
                 }
                 else {
                     user4valid = false;
@@ -395,7 +463,7 @@ public class home extends Application {
 
         });
 
-        grid4.getChildren().addAll(name4Label, name4Input, pays4,pays4Field, btnJouer);
+        grid4.getChildren().addAll(name4Label, name4Input, pays4,pays4Field,BOT4, btnJouer);
         //layout1.getChildren().addAll(label1, button1);
 
         scene4 = new Scene(grid4, 300,120);

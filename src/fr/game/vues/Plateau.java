@@ -31,8 +31,13 @@ public class Plateau extends Application {
     public void start(Stage primaryStage) throws Exception {
 
         window = primaryStage;
-        window.setTitle("listView - Nico");
+        window.setTitle("Plateau");
         button = new Button("Poser la question");
+
+
+        while (Model.getListeCompteFrauduleux().size() > 0){
+
+        }
 
 
         LabelID = new Label("id du Compte");

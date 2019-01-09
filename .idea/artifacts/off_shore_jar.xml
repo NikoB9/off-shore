@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="off-shore:jar">
+    <output-path>$PROJECT_DIR$/out</output-path>
+    <root id="archive" name="off-shore.jar">
+      <element id="module-output" name="off-shore" />
+      <element id="dir-copy" path="$USER_HOME$/Desktop/JavaDoc/temp" />
+    </root>
+  </artifact>
+</component>

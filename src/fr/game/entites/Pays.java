@@ -15,17 +15,40 @@ public Pays(String nom) {
 	ListeSocietes = new HashMap<Integer,ArrayList<Integer>>();
 }
 
+	/**
+	 *
+	 * @return
+	 * ID totale
+	 */
 	public static int getID() {
 		return ID;
 	}
 
+	/**
+	 *
+	 * @return
+	 * id du pays
+	 */
 	public int getIdPays() {
 		return IdPays;
 	}
+
+	/**
+	 *
+	 * @param idPersone
+	 * @param idSociete
+	 * @return
+	 * possesseur de la societe
+	 */
 	public boolean PersonnepossedeSociete(int idPersone, int idSociete){
 	return ListeSocietes.get(idPersone).contains(idSociete);
 	}
 
+	/**
+	 *
+	 * @param idPersonne
+	 * @param idSociete
+	 */
 	public void AjouterSocietePersonne(int idPersonne, int idSociete)
 {
 	if (this.ListeSocietes.containsKey(idPersonne)){
@@ -39,21 +62,43 @@ public Pays(String nom) {
 
 }
 
+	/**
+	 *
+	 * @return
+	 */
 	public String getNom() {
 		return Nom;
 	}
 
+	/**
+	 *
+	 * @param nom
+	 */
 	public void setNom(String nom) {
 		Nom = nom;
 	}
 
+	/**
+	 *
+	 * @param ID
+	 */
 	public static void setID(int ID) {
 		Pays.ID = ID;
 	}
 
+	/**
+	 *
+	 * @param IDPersonne
+	 * @return
+	 */
 	public ArrayList<Integer> getSocietesPersonne(int IDPersonne) {
 			return this.ListeSocietes.get(IDPersonne); }
 
+	/**
+	 *
+	 * @param IDPersonne
+	 * @return
+	 */
 	public boolean paysContientPersonne (int IDPersonne){
 		return this.ListeSocietes.containsKey(IDPersonne);
 	}

@@ -77,7 +77,7 @@ public class Model {
 
 	public static void peupler(){
 		genererContribuables(nbJoueur);
-		genererSocietes(4);
+		genererSocietes(nbSociete);
 		AjouterComptes();
 		creerComptefrauduleux();
 	}
@@ -258,6 +258,7 @@ public class Model {
 	 * @param idCompte
 	 * @param idBanque
 	 * @return
+	 * le compte a idCompte de la baque idBanque
 	 */
 	public static String aQuiEstCeCompte(int idCompte, int idBanque)
 	//retourne l'ID du possesseur du compte
@@ -272,6 +273,13 @@ public class Model {
 			return "Cette banque n'existe pas";
 	}
 
+	/**
+	 *
+	 * @param idPersonne
+	 * @param idPays
+	 * @return
+	 * Les societes qu'une personne dans un pays possede
+	 */
 	public static String QuelleSocietesCettePersooneA(int idPersonne, int idPays)
 	// retourne la liste des IDs des societes de la personne
 	{
@@ -294,6 +302,12 @@ public class Model {
 
 	}
 
+	/**
+	 *
+	 * @param idSociete
+	 * @return
+	 * le possessuer de la Societe en parametre
+	 */
 	public static String QuiPossedeCetteSociete(int idSociete)
 	// retourne l'ID du possesseur
 	{
@@ -313,6 +327,12 @@ public class Model {
 		return retour;
 	}
 
+	/**
+	 *  Ajoute une societe a une personne
+	 * @param idPersonne
+	 * @param societe
+	 * @param idPays
+	 */
 	public static void AjouterSocietePersonne(int idPersonne, Societe societe, int idPays)
 	// Ajoute une societe a une personne
 	{
@@ -324,8 +344,14 @@ public class Model {
 		}
 	}
 
+	/**
+	 * Ajoute une Banque a une personne
+	 * @param idPersonne
+	 * @param banque
+	 * @param idPays
+	 */
 	public static void AjouterSocieteBanquePersonne(int idPersonne, Banque banque, int idPays)
-	// Ajoute une societe a une personne
+	//
 	{
 		if (ListeBanque.containsKey(banque.getIdPersonne())) {
 			System.out.println("erreur : cette societe est deja a une personne");
@@ -335,6 +361,11 @@ public class Model {
 		}
 	}
 
+	/**
+	 *
+	 * @param nb
+	 * genere nb contribuable
+	 */
 	public static void genererContribuables(int nb){
 		for (int i = 0; i < nb; i ++){
 
@@ -342,6 +373,11 @@ public class Model {
 		}
 	}
 
+	/**
+	 *
+	 * @param nb
+	 * genere nb + nbContribuable Societes
+	 */
 	public static void genererSocietes(int nb){
 		for (Map.Entry<Integer, Contribuable> entry : LesContribuable.entrySet()) {
 			Integer k = entry.getKey();
@@ -370,6 +406,7 @@ public class Model {
 		}
 		finBanque = Personne.getID() - 1;
 	}
+
 	public static void AjouterComptes(){
 		int codeBanque = 0;
 
@@ -391,6 +428,13 @@ public class Model {
 			ListeBanque.get(codeBanque).ajouterCompte(c.getIdCompte(),v.getIdPersonne());
 		}
 	}
+
+	/**
+	 *
+	 * @param nom
+	 * @return
+	 * retourne l'id d'un pays par son nom
+	 */
 	public static Integer getIdPaysByname(String nom){
 
 		for (Map.Entry<Integer, Pays> entry : Model.getLesPays().entrySet()) {
@@ -402,6 +446,17 @@ public class Model {
 		}
 		return null;
 	}
+
+	/**
+	 *
+	 * @param idPays
+	 * @param idPersonne
+	 * @param idBanque
+	 * @param idCompte
+	 * @param idJouer
+	 * @return
+	 * permet de dononcer une fraude
+	 */
 	public static String denoncer(int idPays, int idPersonne, int idBanque, int idCompte, int idJouer){
 	try {
 		Model.setJoueurCourant(Model.getJoueurCourant() + 1);
@@ -436,6 +491,7 @@ public class Model {
 		return "Un des champs au moins est erroné";
 	}
 	}
+
 	public static void creerComptefrauduleux(){
 		for (int i = 0; i < ListeCompte.size()/2  ; i++){
 			System.out.println(ListeCompte.get(i).getIdCompte());
